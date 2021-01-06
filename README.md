@@ -2,7 +2,7 @@
 
 <hr></hr>
 
-## Available Plugins
+## Available Tools
 
 |**Plugin Toolkit**|**Version**|**Description**|
 |------|------|------|
