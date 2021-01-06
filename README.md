@@ -1,10 +1,10 @@
-# NetBrain Platform Certification IEv10.0
+# NetBrain Platform Certification Tookits IEv10.0
 
 <hr></hr>
 
 ## Available Plugins
 
-|**Plugin Name**|**Version**|**Description**|
+|**Plugin Toolkit**|**Version**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
 |[Plugin1](#Plugin1) | v0.0.1  | Check missing devices...  |
