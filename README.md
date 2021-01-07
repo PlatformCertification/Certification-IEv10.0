@@ -7,10 +7,10 @@
 |**Plugin Toolkit**|**Version**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-|[Plugin1](#Plugin1) | v0.0.1  | Check missing devices...  |
-|[Plugin2](#Plugin2) | v0.0.1  | Check duplicate Ips...  |
-|[Plugin3](#Plugin3) | v0.0.1  | Check device data table missing...  |
-|[Plugin4](#Plugin4) | v0.0.1  | Check configuration retrieving failed devices... |
+|[Missing IP/device Checking](#Plugin1) | v0.0.1  | Check missing devices...  |
+|[L2 Neighbor Checking](#Plugin2) | v0.0.1  | Check duplicate Ips...  |
+|[L3 Neighbor Checking](#Plugin3) | v0.0.1  | Check device data table missing...  |
+|[Duplicate ip Checking](#Plugin4) | v0.0.1  | Check configuration retrieving failed devices... |
 .
 .
 .
