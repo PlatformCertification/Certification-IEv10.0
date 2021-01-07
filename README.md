@@ -7,10 +7,10 @@
 |**Plugin Toolkit**|**Version**|**Description**|
 |------|------|------|
 |<img width=100/>|<img width=100/>|<img width=500/>|
-|[Missing IP/device Checking](#Plugin1) | v0.0.1  | Check missing devices...  |
-|[L2 Neighbor Checking](#Plugin2) | v0.0.1  | Check duplicate Ips...  |
-|[L3 Neighbor Checking](#Plugin3) | v0.0.1  | Check device data table missing...  |
-|[Duplicate ip Checking](#Plugin4) | v0.0.1  | Check configuration retrieving failed devices... |
+|[Missing IP/device Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Plugin%20Detail%20Introduction/Missing%20IP%20and%20Device%20Checking.md) | v0.0.1  | Check missing devices...  |
+|[L2 Neighbor Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Plugin%20Detail%20Introduction/L2%20Neighbor%20Checking.md) | v0.0.1  | Check duplicate Ips...  |
+|[L3 Neighbor Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Plugin%20Detail%20Introduction/L3%20Neighbor%20Checking.md) | v0.0.1  | Check device data table missing...  |
+|[Duplicate ip Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Plugin%20Detail%20Introduction/Duplicate%20ip%20Checking.md) | v0.0.1  | Check configuration retrieving failed devices... |
 .
 .
 .
