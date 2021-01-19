@@ -357,7 +357,7 @@ global_setting:
 
 #### 4.3.2 Report Sample
 
-![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
+![InterfacePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image013.jpg)
 
 ### 4.4 Enhanced Seed File（To be Discovered）
  
@@ -366,7 +366,7 @@ global_setting:
 
 #### 4.4.2 Report Sample
 
-![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
+![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/enhanced%20seed%20file.png)
 
 ### 4.5 To be deleted devices
  
@@ -380,13 +380,13 @@ global_setting:
 
 #### 4.6.2 Report Sample
 
-![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
+![ZonePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image014.jpg)
 
 ## 5. NetBrain Library Generation From Diagnosis Inputs
 
 Due to the Diagnosis Input structure we have defined now, it is very flexible and with a strong scalability. The purpose is we expect the original diagnosis input can be recursively extended by each engineer who has using it to diagnosis customer NetBrain system. Each customer would have unique legacy network conditions and the diagnosis inputs would be modified, enhanced and updated for accurately coincide with customer network phenomenon. With more and more different diagnosis inputs we can get from customer, after we merge all these inputs together, a general comprehensive almighty NetBrain Library would be grew up:
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![NetBrainLibrary](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/NetBrain%20Library%20(1).png)
 
 With the NetBrain Library enhanced, our engineers can much easier to find a corresponding diagnosis inputs template for new customer which means we can narrow down the involved Netbrain engineers numbers with new customer after we have enough inputs template in NetBrain Library. And also can reduce the meeting times with customer for collecting customer network info, trouble shooting unclassified diagnosis inputs and internal discussion. Which can speed up our Jumpstart program for new customer as we wished to involve Platform certification process into jumpstart program. 
 
@@ -397,21 +397,21 @@ With the NetBrain Library enhanced, our engineers can much easier to find a corr
 ***Operator: Support/Solution/Platform Engineers***
 Based on the results of many discussions, finally chose to use the plugins to manage the certification process, and execute them through the "Schedule Plugin Task".
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![ScheduleTask](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/schedule%20plugin%20task.png)
 
 ### 6.2 Certification Input Definition
 
 ***Operator: Support/Solution/Platform Engineers***
 The input format of the plugin is YAML format, which is used to define the necessary parameters and is used in the actual authentication process, detail design: InputDesign.
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![certificationDefine](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/inputs%20design.png)
 
 ### 6.3 Generate Report
 
 ***Operator: Support/Solution/Platform Engineers***
 Run this plugin and generate the certification report, and then engineers will solve the different issues separately.
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![report](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/certification%20report.png)
 
 ### 6.4 Fix the Issues and Re-Run certification
 #### 6.4.1 Fix the Issues
