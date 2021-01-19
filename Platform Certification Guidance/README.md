@@ -3,7 +3,7 @@
 
 ## 1. Overall Flow
 
-<img src="Platform Certification Guidance/images/Overall flow.png" /><br>
+![OverallFlow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Overall%20flow.png)
     
 ## 2. Input
 
