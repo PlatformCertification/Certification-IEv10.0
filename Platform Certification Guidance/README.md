@@ -3,7 +3,7 @@
 
 ## 1. Overall Flow
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+<img src="Platform Certification Guidance/images/Overall flow.png" /><br>
     
 ## 2. Input
 
