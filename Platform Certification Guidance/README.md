@@ -339,7 +339,7 @@ global_setting:
 
 #### 4.1.2 Report Sample
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
 
 ### 4.2 Device Error Report
  
@@ -348,7 +348,7 @@ global_setting:
 
 #### 4.2.2 Report Sample
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![Devicereport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image012.jpg)
 
 ### 4.3 Interface Error Report
  
@@ -357,7 +357,7 @@ global_setting:
 
 #### 4.3.2 Report Sample
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
 
 ### 4.4 Enhanced Seed File（To be Discovered）
  
@@ -366,7 +366,7 @@ global_setting:
 
 #### 4.4.2 Report Sample
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
 
 ### 4.5 To be deleted devices
  
@@ -380,7 +380,7 @@ global_setting:
 
 #### 4.6.2 Report Sample
 
-<img src="REST APIs Documentation/Device Access Control/DeviceAccessImage.JPG" /><br>
+![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
 
 ## 5. NetBrain Library Generation From Diagnosis Inputs
 
