@@ -11,7 +11,7 @@
     
 ## 2. Input
 
-### 2.1 Certification Significant Input Blocks Introduction
+### 2.1 Certification Input Blocks 
 
 #### 2.1.1. Diagnosis Inputs Block
 > **diagnosis_inputs**<br>
@@ -37,10 +37,10 @@
 > **global_settings**<br>
 >Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
 
-### [2.2 Certification Input Attributes Detail Introduction](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md)
+### [2.2 Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md)
 ***Click on the title for detail information.***
     
-### [2.3 Certification Input Example with Yaml](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md)
+### [2.3 Certification Input Yaml Example](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md)
 ***Click on the title for detail information.***
 
 ## 3. Diagnosis List
