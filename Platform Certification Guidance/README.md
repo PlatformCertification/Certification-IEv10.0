@@ -1,6 +1,25 @@
 
 # Platform Certification Guidance
 
+## Contents
+1. [Over View](#Over)<br>
+1.1. [ToolKit Architecture](#ToolKit)<br>
+1.2. [Detected Issues](#Detected)<br>
+2. [Input](#Input)<br>
+2.1. [Certification Input Blocks](#Certification)<br>
+2.1.1. [Diagnosis Inputs Block](#Diagnosis)<br>
+2.1.2. [Diagnosis Function Block](#Dia)<br>
+2.1.3. [Global Settings Block](#Global)<br>
+2.2. [Certification Input Attributes Detail](#Certif)<br>
+2.3. [Certification Input Yaml Example](#Certifica)<br>
+3. [Diagnosis List](#List)<br>
+4. [Export Reports](#Reports)<br>
+4.1. [IP Error Report](#IP)<br>
+4.1.1. [Included columns](#In)<br>
+4.1.2. [Report Sample](#Rep)<br>
+
+
+
 ## 1. Over View
 ### 1.1. ToolKit Architecture
 
