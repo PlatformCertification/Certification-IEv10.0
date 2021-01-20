@@ -1,9 +1,13 @@
 
 # Platform Certification Guidance
 
-## 1. Overall Flow
+## 1. Summarization
+### 1.1. Overall Flow
 
 ![OverallFlow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Overall%20flow.png)
+
+### 1.2 Detected Issues 
+>>1.Duplicate IP Checking <br> 2.CLI command issue incorrect  <br> 3.Prompt issue  <br> 4.New Driver Issue  <br> 5.New Format Issue  <br> 6.SNMP Only  <br> 7.SNMP no support  <br> 8.OID incorrect  <br> 9.Virtual System  <br> 10.L2 Topology Checking  <br> 11.L3 Topology Checking <br> 12.Configuration Failed  <br> 13.Fixing by add zone
     
 ## 2. Input
 
