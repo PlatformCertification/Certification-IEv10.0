@@ -112,7 +112,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.1.2 Report Sample <a name="Rep"/>
 
-![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/report%20sample.jpg)
+![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/report%20sample.png)
 
 ### 4.2 Device Error Report <a name="Device_Error_Report"/>
  
@@ -121,7 +121,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.2.2 Report Sample <a name="Device_Error_ReportRep"/>
 
-![Devicereport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Device%20Error%20Report.jpg)
+![Devicereport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Device%20Error%20Report.png)
 
 ### 4.3 Interface Error Report <a name="Interface_Error_Report"/>
  
