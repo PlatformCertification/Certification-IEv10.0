@@ -112,7 +112,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.1.2 Report Sample <a name="Rep"/>
 
-![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
+![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/report%20sample.jpg)
 
 ### 4.2 Device Error Report <a name="Device_Error_Report"/>
  
@@ -121,7 +121,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.2.2 Report Sample <a name="Device_Error_ReportRep"/>
 
-![Devicereport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image012.jpg)
+![Devicereport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Device%20Error%20Report.jpg)
 
 ### 4.3 Interface Error Report <a name="Interface_Error_Report"/>
  
@@ -130,7 +130,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.3.2 Report Sample <a name="Interface_Error_ReportRep"/>
 
-![InterfacePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image013.jpg)
+![InterfacePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Interface%20Error%20Report.png)
 
 ### 4.4 Enhanced Seed File（To be Discovered） <a name="Enhanced_Seed_File"/>
  
@@ -139,7 +139,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.4.2 Report Sample <a name="Enhanced_Seed_FileRep"/>
 
-![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/enhanced%20seed%20file.png)
+![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Enhanced%20Seed%20File%20(1).png)
 
 ### 4.5 Change Zone list <a name="Change_Zone_list"/>
  
@@ -148,7 +148,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 #### 4.5.2 Report Sample <a name="Change_Zone_listRep"/>
 
-![ZonePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image014.jpg)
+![ZonePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Change%20Zone%20list.png)
 
 ### 4.6 To be deleted devices <a name="List"/>
  
