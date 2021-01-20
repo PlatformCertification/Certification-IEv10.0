@@ -161,9 +161,6 @@ Run this plugin and generate the certification report, and then engineers will s
 >After the new discovery/benchmark finished, need to re-run the certification and check the new possible issues. <br> If the issues have been solved, we can deliver to the service engineer for the next step. <br> if there are new issues, need to loop the whole process
 
 ## 7. Route Map
-
-
-
-```python
-
-```
+1. GDR Checking
+2. Table Checking
+3. Dry run path logic
