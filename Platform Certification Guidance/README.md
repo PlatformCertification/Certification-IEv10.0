@@ -65,7 +65,7 @@
 **diagnosis_inputs**<br>
 Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
-**certification_inputs.inputs**<br>
+**diagnosis_inputs.inputs**<br>
 As the most important section of certification_inputs, customer must review all attributes which belongs current component in below table. Customer need to take more care of the "qualification" section, we provide three kinds of qualification methods totally:
 
 >1. gdr_qulification
