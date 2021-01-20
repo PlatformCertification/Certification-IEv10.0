@@ -66,7 +66,7 @@
 Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
 **diagnosis_inputs.inputs**<br>
-As the most important section of certification_inputs, customer must review all attributes which belongs current component in below table. Customer need to take more care of the "qualification" section, we provide three kinds of qualification methods totally:
+As the most important section of certification_inputs, customer must review all attributes which belongs current component in [Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md). Customer need to take more care of the "qualification" section, we provide three kinds of qualification methods totally:
 
 >1. gdr_qulification
 >2. patterns
@@ -75,11 +75,9 @@ As the most important section of certification_inputs, customer must review all 
 If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
 
 #### 2.1.2. Diagnosis Function Block <a name="Dia"/>
-**diagnosis_functions.diagnosis_reports.**<br>
-Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
 
-**diagnosis_functions.diagnosis_fixings**<br>
-Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
+**diagnosis_functions**<br>
+Customer need to pre-define desired detecting processes at this section which need to be triggered automatically to find platform related issues after plugin running successfully. For each fixing actions(all provided actions please check [Diagnosis List](#List) table), customer need to decide whether all listed diagnosis functions would be triggered during current plugin running. If one or few of the actions won't be triggered, customer just need to comment out the corresponding action name(s) from diagnosis_functions yaml section. Please check [Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md) for more information.
 
 #### 2.1.3. Global Settings Block <a name="Global"/>
 **global_settings**<br>
