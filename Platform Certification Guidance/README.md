@@ -153,7 +153,7 @@
 > **Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
 
 
-## 5. NetBrain Library Generation From Diagnosis Inputs <a name="List"/>
+## 5. NetBrain Library Generation From Diagnosis Inputs <a name="NetBrainLib"/>
 
 Due to the Diagnosis Input structure we have defined now, it is very flexible and with a strong scalability. The purpose is we expect the original diagnosis input can be recursively extended by each engineer who has using it to diagnosis customer NetBrain system. Each customer would have unique legacy network conditions and the diagnosis inputs would be modified, enhanced and updated for accurately coincide with customer network phenomenon. With more and more different diagnosis inputs we can get from customer, after we merge all these inputs together, a general comprehensive almighty NetBrain Library would be grew up:
 
