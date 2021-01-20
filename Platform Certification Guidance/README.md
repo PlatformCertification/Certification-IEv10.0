@@ -23,11 +23,11 @@
 ## 1. Over View <a name="Over"/>
 
 
-### 1.1. ToolKit Architecture
+### 1.1. ToolKit Architecture <a name="ToolKit"/>
 
 ![OverallFlow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Overall%20flow.png)
 
-### 1.2 Detected Issues 
+### 1.2 Detected Issues <a name="Detected"/>
 1. Duplicate IP Checking 
 2. CLI command issue incorrect  
 3. Prompt issue   
@@ -42,11 +42,11 @@
 12. Configuration Failed  
 13. Fixing by add zone
     
-## 2. Input
+## 2. Input <a name="Input"/>
 
-### 2.1 Certification Input Blocks 
+### 2.1 Certification Input Blocks <a name="ToolCertificationKit"/>
 
-#### 2.1.1. Diagnosis Inputs Block
+#### 2.1.1. Diagnosis Inputs Block <a name="Diagnosis"/>
 > **diagnosis_inputs**<br>
 >Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
@@ -59,24 +59,24 @@
 
 >If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
 
-#### 2.1.2. Diagnosis Function Block
+#### 2.1.2. Diagnosis Function Block <a name="Dia"/>
 > **diagnosis_functions.diagnosis_reports.**<br>
 > Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
 
 > **diagnosis_functions.diagnosis_fixings**<br>
 >Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
 
-#### 2.1.3. Global Settings Block
+#### 2.1.3. Global Settings Block <a name="Global"/>
 > **global_settings**<br>
 >Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
 
-### [2.2 Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md)
+### [2.2 Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md) <a name="Certif"/>
 ***Click on the title for detail information.***
     
-### [2.3 Certification Input Yaml Example](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md)
+### [2.3 Certification Input Yaml Example](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md) <a name="Certifica"/>
 ***Click on the title for detail information.***
 
-## 3. Diagnosis List
+## 3. Diagnosis List <a name="ToolKit"/>
 | Diagnosis Name | Diagnosis Target |
 | --- | --- |
 |[L3 Neighbor / Missing Device Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/L3%20Neighbor%20%26%20Missing%20Device%20Checking.md) | 1. Detecting all L3 missing devices in customer legacy network. <br>2. Generating reports for further analysis. |
