@@ -102,7 +102,6 @@ Customer need to insert all corresponding values for each attribute in this sect
 |Fix Duplicate IP | 1. By detect all existing duplicate IP interfaces. <br>2. Base on the data source in Digital Twin DB which generated rely on the diagnosis inputs customer provided. <br>  3. Set device name, interface name and interface IP as search key to find L3 Topo records and separate IPs into different groups per L3 Topo. <br> 4. Then assign the duplicate IPs into different zones per L3 Topo groups.|
 |Multi-Vendor Collection| 1. Collecting customer vendor capacity. <br>2. Checking supported vendors per built in driver. <br>3. Generating reports for further analysis.|
 |Fixing LAN Subnet Issue |   1. Base on data source from digital twin DB. <br> 2. Separate neighbor pair into groups. <br> 3. Filter out duplicate subnet. <br> 4. Compare the duplicate subnet and group interface information with the subnet and interface info in  Netbrain DB, then separate the subnet MP L3 topology. |
-|Device/Interface GDR diagnosis| Ongoing|
 
 [***To Top***](#Contents)
 
