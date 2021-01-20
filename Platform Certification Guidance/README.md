@@ -9,14 +9,7 @@
 
 ### 2.1 Certification Significant Input Blocks Introduction
 
-#### 2.1.1. Diagnosis Function Block
-> **diagnosis_functions.diagnosis_reports.**<br>
-> Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
-
-> **diagnosis_functions.diagnosis_fixings**<br>
->Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
-
-#### 2.1.2. Diagnosis Inputs Block
+#### 2.1.1. Diagnosis Inputs Block
 > **diagnosis_inputs**<br>
 >Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
@@ -28,6 +21,13 @@
 >>3. regexes
 
 >If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
+
+#### 2.1.2. Diagnosis Function Block
+> **diagnosis_functions.diagnosis_reports.**<br>
+> Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
+
+> **diagnosis_functions.diagnosis_fixings**<br>
+>Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
 
 #### 2.1.3. Global Settings Block
 > **global_settings**<br>
