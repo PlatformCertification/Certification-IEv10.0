@@ -9,16 +9,18 @@
 
 ### 2.1 Certification Significant Input Blocks Introduction
 
-#### 2.1.1. diagnosis_functions.diagnosis_reports.
+#### 2.1.1. Diagnosis Function Block
+> **diagnosis_functions.diagnosis_reports.**<br>
 > Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
 
-#### 2.1.2. diagnosis_functions.diagnosis_fixings
+> **diagnosis_functions.diagnosis_fixings**<br>
 >Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
 
-#### 2.1.3. certification_inputs
+#### 2.1.2. Diagnosis Inputs Block
+> **diagnosis_inputs**<br>
 >Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
-#### 2.1.4. certification_inputs.inputs
+> **certification_inputs.inputs**<br>
 >As the most important section of certification_inputs, customer must review all attributes which belongs current component in below table. Customer need to take more care of the "qualification" section, we provide three kinds of qualification methods totally:
 
 >>1. gdr_qulification
@@ -27,7 +29,8 @@
 
 >If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
 
-#### 2.1.5. global_setting
+#### 2.1.3. Global Settings Block
+> **global_settings**<br>
 >Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
 
 ### 2.2 Certification Input Attributes Detail Introduction
@@ -368,19 +371,20 @@ global_setting:
 
 ![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/enhanced%20seed%20file.png)
 
-### 4.5 To be deleted devices
+### 4.5 Change Zone list
  
-#### 4.4.1 Included columns
-> **Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
-
-### 4.6 Change Zone list
- 
-#### 4.6.1 Included columns
+#### 4.5.1 Included columns
 > **IP Subnet:** the IP subnet info which has been detected. <br> **Device:** the device hostname of current device which the IP subnet belongs to. <br> **Interface:** name of the interface which associate with current IP subnet. <br> **Interface IPMASK:** the IPMASK information of current interface. <br> **Zone Name:** name of the zone which the current IP subnet belongs to.
 
-#### 4.6.2 Report Sample
+#### 4.5.2 Report Sample
 
 ![ZonePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image014.jpg)
+
+### 4.6 To be deleted devices
+ 
+#### 4.6.1 Included columns
+> **Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
+
 
 ## 5. NetBrain Library Generation From Diagnosis Inputs
 
