@@ -58,7 +58,7 @@
 ## 3. Diagnosis List
 | Diagnosis Name | Diagnosis Target |
 | --- | --- |
-|L3 Neighbor / Missing Device Checking | 1. Detecting all L3 missing devices in customer legacy network. <br>2. Generating reports for further analysis. |
+|[L3 Neighbor / Missing Device Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/L3%20Neighbor%20%26%20Missing%20Device%20Checking.md) | 1. Detecting all L3 missing devices in customer legacy network. <br>2. Generating reports for further analysis. |
 |L2 Neighbor Checking | 1. Detecting all L2 missing devices in customer legacy network. <br>2. Generating reports for further analysis. |
 |Duplicate IP Checking | 1. Detecting all duplicate IPs in customer NetBrain processing domain after discovery all legacy devices. <br>2. Generating reports for further analysis. |
 |Fix Duplicate IP | 1. By detect all existing duplicate IP interfaces. <br>2. Base on the data source in Digital Twin DB which generated rely on the diagnosis inputs customer provided. <br>  3. Set device name, interface name and interface IP as search key to find L3 Topo records and separate IPs into different groups per L3 Topo. <br> 4. Then assign the duplicate IPs into different zones per L3 Topo groups.|
