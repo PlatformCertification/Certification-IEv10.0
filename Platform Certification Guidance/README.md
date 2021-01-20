@@ -2,23 +2,36 @@
 # Platform Certification Guidance
 
 ## Contents
-1. [Over View](#Over)<br>
-1.1. [ToolKit Architecture](#ToolKit)<br>
-1.2. [Detected Issues](#Detected)<br>
-2. [Input](#Input)<br>
-2.1. [Certification Input Blocks](#Certification)<br>
-2.1.1. [Diagnosis Inputs Block](#Diagnosis)<br>
-2.1.2. [Diagnosis Function Block](#Dia)<br>
-2.1.3. [Global Settings Block](#Global)<br>
-2.2. [Certification Input Attributes Detail](#Certif)<br>
-2.3. [Certification Input Yaml Example](#Certifica)<br>
-3. [Diagnosis List](#List)<br>
-4. [Export Reports](#Reports)<br>
-4.1. [IP Error Report](#IP)<br>
-4.1.1. [Included columns](#In)<br>
-4.1.2. [Report Sample](#Rep)<br>
-
-
+* 1. [Over View](#Over)<br>
+  * 1.1. [ToolKit Architecture](#ToolKit)<br>
+  * 1.2. [Detected Issues](#Detected)<br>
+* 2. [Input](#Input)<br>
+  * 2.1. [Certification Input Blocks](#Certification)<br>
+    * 2.1.1. [Diagnosis Inputs Block](#Diagnosis)<br>
+    * 2.1.2. [Diagnosis Function Block](#Dia)<br>
+    * 2.1.3. [Global Settings Block](#Global)<br>
+  * 2.2. [Certification Input Attributes Detail](#Certif)<br>
+  * 2.3. [Certification Input Yaml Example](#Certifica)<br>
+* 3. [Diagnosis List](#List)<br>
+* 4. [Export Reports](#Reports)<br>
+  * 4.1. [IP Error Report](#IP)<br>
+    * 4.1.1. [Included columns](#In)<br>
+    * 4.1.2. [Report Sample](#Rep)<br>
+  * 4.2. [Device Error Report](#Device_Error_Report)<br>
+    * 4.2.1. [Included columns](#Device_Error_ReportIn)<br>
+    * 4.2.2. [Report Sample](#Device_Error_ReportRep)<br>
+  * 4.3. [Interface Error Report](#Interface_Error_Report)<br>
+    * 4.3.1. [Included columns](#Interface_Error_ReportIn)<br>
+    * 4.3.2. [Report Sample](#Interface_Error_ReportRep)<br>
+  * 4.4. [Enhanced Seed File](#Enhanced_Seed_File)<br>
+    * 4.4.1. [Included columns](#Enhanced_Seed_FileIn)<br>
+    * 4.4.2. [Report Sample](#Enhanced_Seed_FileRep)<br>
+  * 4.5. [Change Zone list](#Change_Zone_list)<br>
+    * 4.4.1. [Included columns](#Change_Zone_listIn)<br>
+    * 4.4.2. [Report Sample](#Change_Zone_listRep)<br>
+* 5. [NetBrain Library Generation From Diagnosis Inputs](#NetBrainLib)<br>
+* 6. [Toolkit Operation Flow](#ToolkitFlow)<br>
+* 7. [Route Map](#Route)<br>
 
 ## 1. Over View <a name="Over"/>
 
@@ -76,7 +89,7 @@
 ### [2.3 Certification Input Yaml Example](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md) <a name="Certifica"/>
 ***Click on the title for detail information.***
 
-## 3. Diagnosis List <a name="ToolKit"/>
+## 3. Diagnosis List <a name="List"/>
 | Diagnosis Name | Diagnosis Target |
 | --- | --- |
 |[L3 Neighbor / Missing Device Checking](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/L3%20Neighbor%20%26%20Missing%20Device%20Checking.md) | 1. Detecting all L3 missing devices in customer legacy network. <br>2. Generating reports for further analysis. |
@@ -87,60 +100,60 @@
 |Fixing LAN Subnet Issue |   1. Base on data source from digital twin DB. <br> 2. Separate neighbor pair into groups. <br> 3. Filter out duplicate subnet. <br> 4. Compare the duplicate subnet and group interface information with the subnet and interface info in  Netbrain DB, then separate the subnet MP L3 topology. |
 |Device/Interface GDR diagnosis| Ongoing|
 
-## 4. Export Reports
+## 4. Export Reports <a name="Reports"/>
 
-### 4.1 IP Error Report
+### 4.1 IP Error Report <a name="IP"/>
  
-#### 4.1.1 Included columns
+#### 4.1.1 Included columns <a name="In"/>
 > **IP:** the IPs which will be considered as duplicate IPs. <br> **ErrorCode Message:** the massage to describe the corresponding error code.<br> **ErrorCode:** the error code which occurred by current IP.<br> **Source Device:** the device which current IP belongs to.<br> **CLI Command:** the CLI command which retrieve the current IP information.
 
-#### 4.1.2 Report Sample
+#### 4.1.2 Report Sample <a name="Rep"/>
 
 ![IPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image011.jpg)
 
-### 4.2 Device Error Report
+### 4.2 Device Error Report <a name="Device_Error_Report"/>
  
-#### 4.2.1 Included columns**
+#### 4.2.1 Included columns  <a name="Device_Error_ReportIn"/>
 > **Device:** the device hostname of current device which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
 
-#### 4.2.2 Report Sample
+#### 4.2.2 Report Sample <a name="Device_Error_ReportRep"/>
 
 ![Devicereport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image012.jpg)
 
-### 4.3 Interface Error Report
+### 4.3 Interface Error Report <a name="Interface_Error_Report"/>
  
-#### 4.3.1 Included columns
+#### 4.3.1 Included columns <a name="Interface_Error_ReportIn"/>
 > **Device:** the device hostname of current device. <br> **Interface:** the interface name of current interface which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
 
-#### 4.3.2 Report Sample
+#### 4.3.2 Report Sample <a name="Interface_Error_ReportRep"/>
 
 ![InterfacePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image013.jpg)
 
-### 4.4 Enhanced Seed File（To be Discovered）
+### 4.4 Enhanced Seed File（To be Discovered） <a name="Enhanced_Seed_File"/>
  
-#### 4.4.1 Included columns
+#### 4.4.1 Included columns <a name="Enhanced_Seed_FileIn"/>
 > **IP List:** IPs which can be considered as a network device IP from device data( e.g. Routing table ) but only can be found in Unknown IP List.
 
-#### 4.4.2 Report Sample
+#### 4.4.2 Report Sample <a name="Enhanced_Seed_FileRep"/>
 
 ![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/enhanced%20seed%20file.png)
 
-### 4.5 Change Zone list
+### 4.5 Change Zone list <a name="Change_Zone_list"/>
  
-#### 4.5.1 Included columns
+#### 4.5.1 Included columns <a name="Change_Zone_listIn"/>
 > **IP Subnet:** the IP subnet info which has been detected. <br> **Device:** the device hostname of current device which the IP subnet belongs to. <br> **Interface:** name of the interface which associate with current IP subnet. <br> **Interface IPMASK:** the IPMASK information of current interface. <br> **Zone Name:** name of the zone which the current IP subnet belongs to.
 
-#### 4.5.2 Report Sample
+#### 4.5.2 Report Sample <a name="Change_Zone_listRep"/>
 
 ![ZonePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/image014.jpg)
 
-### 4.6 To be deleted devices
+### 4.6 To be deleted devices <a name="List"/>
  
-#### 4.6.1 Included columns
+#### 4.6.1 Included columns <a name="List"/>
 > **Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
 
 
-## 5. NetBrain Library Generation From Diagnosis Inputs
+## 5. NetBrain Library Generation From Diagnosis Inputs <a name="List"/>
 
 Due to the Diagnosis Input structure we have defined now, it is very flexible and with a strong scalability. The purpose is we expect the original diagnosis input can be recursively extended by each engineer who has using it to diagnosis customer NetBrain system. Each customer would have unique legacy network conditions and the diagnosis inputs would be modified, enhanced and updated for accurately coincide with customer network phenomenon. With more and more different diagnosis inputs we can get from customer, after we merge all these inputs together, a general comprehensive almighty NetBrain Library would be grew up:
 
@@ -148,11 +161,11 @@ Due to the Diagnosis Input structure we have defined now, it is very flexible an
 
 With the NetBrain Library enhanced, our engineers can much easier to find a corresponding diagnosis inputs template for new customer which means we can narrow down the involved Netbrain engineers numbers with new customer after we have enough inputs template in NetBrain Library. And also can reduce the meeting times with customer for collecting customer network info, trouble shooting unclassified diagnosis inputs and internal discussion. Which can speed up our Jumpstart program for new customer as we wished to involve Platform certification process into jumpstart program. 
 
-## [6. Toolkit Operation Flow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Toolkit%20Operation%20Flow.md)
+## [6. Toolkit Operation Flow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Toolkit%20Operation%20Flow.md) <a name="ToolkitFlow"/>
 ***Click on the title for detail information.***
 
 
-## 7. Route Map
+## 7. Route Map <a name="Route"/>
 1. GDR Checking
 2. Table Checking
 3. Dry run path logic
