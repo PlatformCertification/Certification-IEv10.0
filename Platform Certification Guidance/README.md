@@ -2,7 +2,7 @@
 # Platform Certification Guidance
 
 ## Contents <a name="Contents"/>
-* 1. [Over View](#Over)<br>
+* 1. [OverView](#Over)<br>
   * 1.1. [ToolKit Architecture](#ToolKit)<br>
   * 1.2. [Detected Issues](#Detected)<br>
 * 2. [Input](#Input)<br>
@@ -33,7 +33,7 @@
 * 6. [Toolkit Operation Flow](#ToolkitFlow)<br>
 * 7. [Route Map](#Route)<br>
 
-## 1. Over View <a name="Over"/>
+## 1. OverView <a name="Over"/>
 
 
 ### 1.1. ToolKit Architecture <a name="ToolKit"/>
@@ -62,28 +62,28 @@
 ### 2.1 Certification Input Blocks <a name="ToolCertificationKit"/>
 
 #### 2.1.1. Diagnosis Inputs Block <a name="Diagnosis"/>
-> **diagnosis_inputs**<br>
->Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
+**diagnosis_inputs**<br>
+Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
-> **certification_inputs.inputs**<br>
->As the most important section of certification_inputs, customer must review all attributes which belongs current component in below table. Customer need to take more care of the "qualification" section, we provide three kinds of qualification methods totally:
+**certification_inputs.inputs**<br>
+As the most important section of certification_inputs, customer must review all attributes which belongs current component in below table. Customer need to take more care of the "qualification" section, we provide three kinds of qualification methods totally:
 
->>1. gdr_qulification
->>2. patterns
->>3. regexes
+>1. gdr_qulification
+>2. patterns
+>3. regexes
 
->If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
+If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
 
 #### 2.1.2. Diagnosis Function Block <a name="Dia"/>
-> **diagnosis_functions.diagnosis_reports.**<br>
-> Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
+**diagnosis_functions.diagnosis_reports.**<br>
+Customer need to pre-define all diagnosis reports at this section which need to be generated after plugin running successfully. For each diagnosis report, customer need to provide the corresponding report name and enable flag as inputs, please check Detail Introduction for more information.
 
-> **diagnosis_functions.diagnosis_fixings**<br>
->Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
+**diagnosis_functions.diagnosis_fixings**<br>
+Customer need to pre-define desired fixing processes at this section which need to be triggered automatically to fix platform related issues after plugin running successfully. For each fixing actions, customer need to provide the corresponding action name and enable flag as inputs, please check Detail Introduction for more information.
 
 #### 2.1.3. Global Settings Block <a name="Global"/>
-> **global_settings**<br>
->Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
+**global_settings**<br>
+Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
 
 ### [2.2 Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md) <a name="Certif"/>
 ***Click on the title for detail information.***
@@ -111,7 +111,7 @@
 ### 4.1 IP Error Report <a name="IP"/>
  
 #### 4.1.1 Included columns <a name="In"/>
-> **IP:** the IPs which will be considered as duplicate IPs. <br> **ErrorCode Message:** the massage to describe the corresponding error code.<br> **ErrorCode:** the error code which occurred by current IP.<br> **Source Device:** the device which current IP belongs to.<br> **CLI Command:** the CLI command which retrieve the current IP information.
+**IP:** the IPs which will be considered as duplicate IPs. <br> **ErrorCode Message:** the massage to describe the corresponding error code.<br> **ErrorCode:** the error code which occurred by current IP.<br> **Source Device:** the device which current IP belongs to.<br> **CLI Command:** the CLI command which retrieve the current IP information.
 
 #### 4.1.2 Report Sample <a name="Rep"/>
 
@@ -120,7 +120,7 @@
 ### 4.2 Device Error Report <a name="Device_Error_Report"/>
  
 #### 4.2.1 Included columns  <a name="Device_Error_ReportIn"/>
-> **Device:** the device hostname of current device which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
+**Device:** the device hostname of current device which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
 
 #### 4.2.2 Report Sample <a name="Device_Error_ReportRep"/>
 
@@ -129,7 +129,7 @@
 ### 4.3 Interface Error Report <a name="Interface_Error_Report"/>
  
 #### 4.3.1 Included columns <a name="Interface_Error_ReportIn"/>
-> **Device:** the device hostname of current device. <br> **Interface:** the interface name of current interface which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
+**Device:** the device hostname of current device. <br> **Interface:** the interface name of current interface which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
 
 #### 4.3.2 Report Sample <a name="Interface_Error_ReportRep"/>
 
@@ -138,7 +138,7 @@
 ### 4.4 Enhanced Seed File（To be Discovered） <a name="Enhanced_Seed_File"/>
  
 #### 4.4.1 Included columns <a name="Enhanced_Seed_FileIn"/>
-> **IP List:** IPs which can be considered as a network device IP from device data( e.g. Routing table ) but only can be found in Unknown IP List.
+**IP List:** IPs which can be considered as a network device IP from device data( e.g. Routing table ) but only can be found in Unknown IP List.
 
 #### 4.4.2 Report Sample <a name="Enhanced_Seed_FileRep"/>
 
@@ -147,7 +147,7 @@
 ### 4.5 Change Zone list <a name="Change_Zone_list"/>
  
 #### 4.5.1 Included columns <a name="Change_Zone_listIn"/>
-> **IP Subnet:** the IP subnet info which has been detected. <br> **Device:** the device hostname of current device which the IP subnet belongs to. <br> **Interface:** name of the interface which associate with current IP subnet. <br> **Interface IPMASK:** the IPMASK information of current interface. <br> **Zone Name:** name of the zone which the current IP subnet belongs to.
+**IP Subnet:** the IP subnet info which has been detected. <br> **Device:** the device hostname of current device which the IP subnet belongs to. <br> **Interface:** name of the interface which associate with current IP subnet. <br> **Interface IPMASK:** the IPMASK information of current interface. <br> **Zone Name:** name of the zone which the current IP subnet belongs to.
 
 #### 4.5.2 Report Sample <a name="Change_Zone_listRep"/>
 
@@ -156,7 +156,7 @@
 ### 4.6 To be deleted devices <a name="List"/>
  
 #### 4.6.1 Included columns <a name="List"/>
-> **Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
+**Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
 
 [***To Top***](#Contents)
 
