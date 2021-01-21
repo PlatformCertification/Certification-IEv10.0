@@ -48,18 +48,18 @@
 
 ### 1.2 Detected Issues <a name="Detected"/>
 1. Duplicate IP Checking 
-2. CLI command issue incorrect  
-3. Prompt issue   
+2. CLI Command Issue Incorrect  
+3. Prompt Issue   
 4. New Driver Issue  
 5. New Format Issue  
 6. SNMP Only 
-7. SNMP no support  
-8. OID incorrect  
+7. SNMP No Support  
+8. OID Incorrect  
 9. Virtual System  
 10. L2 Topology Checking 
 11. L3 Topology Checking 
 12. Configuration Failed  
-13. Fixing by add zone
+13. Fixing by Add Zone
 
 [***To Top***](#Contents)
     
