@@ -10,15 +10,9 @@ variable_mapping:
     Interface: Interface
     IP Address: Neighbor Interface IP
     MAC Address: Neighbor Interface MAC
-common_tables_defines:
-    - index_variables:
-        - Interface
-        - Neighbor Interface IP
-    table_variables:
-        - Interface
-        - Neighbor Interface IP
-        - Neighbor Interface MAC
-    common_table_name: Common L3 Neighbor Table
+- index_variables:
+    - Interface
+    - Neighbor Interface IP
 ```
 
 #### 1.2 Input for Route Table
@@ -29,14 +23,9 @@ system_table: Route Table
 variable_mapping:
   OutIf: Interface
   NextHop: Neighbor Interface IP
-common_tables_defines:
-  - index_variables:
-      - Neighbor Interface IP
-      - Interface
-    table_variables:
-      - Neighbor Interface IP
-      - Interface
-    common_table_name: Common L3 Neighbor Table
+- index_variables:
+  - Neighbor Interface IP
+  - Interface
 ```
 
 #### 1.3 Input from Parser
@@ -51,18 +40,12 @@ input_datas:
       intf: Interface
       intf_addr: Neighbor Interface IP
       area_id: Area ID
-    common_tables_defines:
-      - index_variables:
-          - Interface
-          - Neighbor Interface IP
-        table_variables:
-          - Interface
-          - Neighbor Interface IP
-          - Area ID
-        common_table_name: Common L3 Neighbor Table
+    - index_variables:
+      - Interface
+      - Neighbor Interface IP
 ```
 
-#### 1.4 Input for Qualification Setting
+#### 1.4 Device Qualification
 ```yaml
 qualification:
   gdr:
