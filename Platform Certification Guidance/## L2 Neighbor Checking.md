@@ -33,11 +33,11 @@ variable_mapping:
 
 #### 2.1 Build Common Table and Digital Twin Table
 
-![BuildDigitalTwin](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/L3%20Neighbor%20-%20Build%20Degitial%20Twin.png)
+![BuildDigitalTwin](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-L2%20Neighbor%20Checking.png)
 
 #### 2.2 Diagnosis Checking Logic
 
-![CheckingLogic](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Diagnosis%20Logic%20Checking.png)
+![CheckingLogic](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-L2%20Checking%20Logic.png)
 
 ### 3. Important
 1. OSPF neighbors across devices are not considered
