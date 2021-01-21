@@ -3,13 +3,13 @@
 |Name|Type|Description|
 | --- | --- | --- |
 | diagnosis_inputs | List of Object | Define the entire data inputs for the entire following diagnosis process. |
-| diagnosis_inputs.name | String | Represent which diagnosis function will be considered in current plugin |
+| diagnosis_inputs.name | String | Represent the corresponding diagnosis function which will use the data as data source that defined by this diagnosis_inputs block in current plugin. |
 | diagnosis_inputs.enable | Boolean | Represent whether this data input would be enabled in the current plugin. |
 | diagnosis_inputs.inputs | List of Object | Define all detail information of required inputs for current data source retrieving. |
-| diagnosis_inputs.inputs.name | String | Point out whether using system table or parsers as data source for current diagnosis function. |
-| diagnosis_inputs.inputs.input_datas | List of Object | Represent detail parsers and system table information, define the mapping relationship between data source table and common report table.|
-| diagnosis_inputs.inputs.input_datas.parser | String | Define all parsers  which will be considered as data source for current diagnosis function by using parser name. Use "/" as delimiter if muiltiple parsers will be considered.|
-| diagnosis_inputs.inputs.input_datas.system_table | String | Define all system tables which will be considered as data source for current diagnosis function by using parser name. Use "/" as delimiter if muiltiple parsers will be considered.|
+| diagnosis_inputs.inputs.name | String | Define a name for current input block |
+| diagnosis_inputs.inputs.input_datas | List of Object | Represent detail parsers or system table information, define the mapping relationship between data source table and common report table.<br> ***Note:*** During one input_datas block, can only using parsers or only using system table as data source, parsers and system tables cannot both exist in one input_datas block.|
+| diagnosis_inputs.inputs.input_datas.parser | String | Define all parsers  which will be considered as data source for current diagnosis function by using parser name. Use "/" as delimiter if muiltiple parsers will be considered. ***Note:*** if customer provide values for "parser" element, then system_table cannot be filled.|
+| diagnosis_inputs.inputs.input_datas.system_table | String | Define one system table which will be considered as data source for current diagnosis function by using parser name. Use "/" as delimiter if muiltiple parsers will be considered.|
 | diagnosis_inputs.inputs.input_datas.variable_mapping | Object | Define column relationships between parser table and common table. Note: the common table is the result data table which will be generated as diagnosis result per current inputs block. |
 | diagnosis_inputs.inputs.input_datas.index_variables | List of String | Define the index rule of current common table specify the common table column title, support muilti-column.  |
 |diagnosis_inputs.inputs.input_datas.extend_common_variables | List of String| List the columns which will be appended into common table as additional data from the parser or system table defined in "parsers" and "system_table" elements by column titles.|
