@@ -1,7 +1,7 @@
 ## L2 Neighbor Checking
 
 ### 1.Certification Input
-#### 1.1 Input for ARP Table
+#### 1.1 Input for NDP Table
 ```yaml
 cli_cmds:
     - show cdp neighbor
@@ -40,5 +40,3 @@ variable_mapping:
 ![CheckingLogic](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-L2%20Checking%20Logic.png)
 
 ### 3. Important
-1. OSPF neighbors across devices are not considered
-2. If the neighbor device and neighbor interface cannot be found in the digital twin table, then it is not considered
