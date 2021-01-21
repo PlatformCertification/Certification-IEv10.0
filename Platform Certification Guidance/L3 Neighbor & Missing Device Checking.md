@@ -62,7 +62,7 @@ input_datas:
         common_table_name: Common L3 Neighbor Table
 ```
 
-#### 1.4 Input for ARP Table
+#### 1.4 Input for Qualification Setting
 ```yaml
 qualification:
   gdr:
