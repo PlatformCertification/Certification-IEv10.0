@@ -23,7 +23,7 @@ dianosis_inputs:
     qualification:
       gdr:
         conditions:
-        - expression: 'Cisco'
+        - value: 'Cisco'
           operator: 4
           schema: subTypeName
         expression: A
