@@ -93,7 +93,57 @@ Customer need to insert all corresponding values for each attribute in this sect
 ***Click on the title for detail information.***
     
 ### [2.3 Certification Input Yaml Example](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md) <a name="Certifica"/>
-***Click on the title for detail information.***
+***Click on the title for built-in Yaml file.***
+
+**Simplified Input Sample:**
+```yaml
+---
+dianosis_inputs:
+- name: L3 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
+  enable: true
+  inputs:
+  - name: System Table Inputs[All Vendors] # Name of current data input.
+    input_datas:
+    - parser: "Shared Files in Tenant/Certification Tool Parsers/OSPF Neighbors Detail [Cisco IOS]"
+      system_table: ARP Table # parser or system_table can only have one in each input_datas block
+      variable_mapping:
+        Interface: Interface
+        IP Address: Neighbor Interface IP
+        MAC Address: Neighbor Interface MAC
+        Area ID: Interface Area ID
+      index_variables:
+      - Interface
+      - Interface IP
+      extend_common_variables:
+      - Interface Area ID
+    qualification:
+      gdr:
+        conditions:
+        - value: 'Cisco'
+          operator: 4
+          schema: subTypeName
+        expression: A
+      patterns:
+      - "interface $str:intfName1"
+      - "ip address $ip:ip1 $ip:mask1"
+      regexes:
+      - "regex:router ospf [0-9]+"
+diagnosis_functions:
+  - L3 Neighbor Checking # Report Missing/Wrong L3 topology, Missing Devices..
+  - L2 Neighbor Checking # Report Missing/Wrong L2 topology, Missing Devices..
+  - Duplicate IP Checking
+  - Multi-Vendor Collection
+  #- Duplicate IP Fixing
+global_setting:
+  white_ip_list: []
+  enable_whilte_ip_list: true
+  debug_options:
+    log_level: 3
+    build_common_table_from_inputs: true
+    build_digital_twin: true
+    run_diagnosis: true
+    use_parser_cache_data: false
+```
 
 [***To Top***](#Contents)
 
