@@ -23,8 +23,6 @@
 | diagnosis_inputs.inputs.qualification.patterns | List of String | Represent the config patterns which will be considered as a filter for daignosis data. |
 | diagnosis_inputs.inputs.qualification.regexes | List of String | Represent the regex rules which will be considered as a filter for diagnosis data. |
 | diagnosis_functions | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis function name. All diagnosis functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |
-| diagnosis_functions.diagnosis_reports | List of Object | The list represents all customer required plugin checks. |
-| diagnosis_functions.diagnosis_reports.description | String | Describe the purpose and adventage of current diagnosis report. |
 | global_setting | Object | Represent the global settings for current pluginÂ  |
 | debug_options | Object | Define the debug features of current diagnosis process. |
 | global_setting.debug_options.build_common_table_from_inputs | Boolean | Represent whether build the common table base on customer inputs. |
