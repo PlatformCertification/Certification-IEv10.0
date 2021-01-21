@@ -161,7 +161,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 
 Due to the Diagnosis Input structure we have defined now, it is very flexible and with a strong scalability. The purpose is we expect the original diagnosis input can be recursively extended by each engineer who has using it to diagnosis customer NetBrain system. Each customer would have unique legacy network conditions and the diagnosis inputs would be modified, enhanced and updated for accurately coincide with customer network phenomenon. With more and more different diagnosis inputs we can get from customer, after we merge all these inputs together, a general comprehensive almighty NetBrain Library would be grew up:
 
-![NetBrainLibrary](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/NetBrain%20Library%20(1).png)
+![NetBrainLibrary](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/MicrosoftTeams-image.png)
 
 With the NetBrain Library enhanced, our engineers can much easier to find a corresponding diagnosis inputs template for new customer which means we can narrow down the involved Netbrain engineers numbers with new customer after we have enough inputs template in NetBrain Library. And also can reduce the meeting times with customer for collecting customer network info, trouble shooting unclassified diagnosis inputs and internal discussion. Which can speed up our Jumpstart program for new customer as we wished to involve Platform certification process into jumpstart program. 
 
