@@ -38,7 +38,13 @@
 
 ### 1.1. ToolKit Architecture <a name="ToolKit"/>
 
-![OverallFlow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Overall%20flow.png)
+**Certification Framework Architecture**
+
+![OverallFlow](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Framework.png)
+
+**Certification Common Table Generate Sample**
+
+![CommonTable](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Sample.png)
 
 ### 1.2 Detected Issues <a name="Detected"/>
 1. Duplicate IP Checking 
