@@ -123,7 +123,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 ### 4.2 Device Error Report <a name="Device_Error_Report"/>
  
 #### 4.2.1 Included columns  <a name="Device_Error_ReportIn"/>
-**Device:** the device hostname of current device which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
+**Device:** the device hostname of current device which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In Baseline:** the corresponding represent value in NetBrain system of current device. <br> **In Digital Twin:** the corresponding represent value in platform certification process of current device.
 
 #### 4.2.2 Report Sample <a name="Device_Error_ReportRep"/>
 
@@ -132,7 +132,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 ### 4.3 Interface Error Report <a name="Interface_Error_Report"/>
  
 #### 4.3.1 Included columns <a name="Interface_Error_ReportIn"/>
-**Device:** the device hostname of current device. <br> **Interface:** the interface name of current interface which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In System:** the corresponding represent value in NetBrain system of current device. <br> **In Certification:** the corresponding represent value in platform certification process of current device.
+**Device:** the device hostname of current device. <br> **Interface:** the interface name of current interface which facing errors. <br> **ErrorCode Message:** the massage to describe the corresponding error code. <br> **ErrorCode:** the error code which occurred by current IP. <br> **CLI Command:** the CLI command which retrieve the current IP information. <br> **In Baseline:** the corresponding represent value in NetBrain system of current device. <br> **In Digital Twin:** the corresponding represent value in platform certification process of current device.
 
 #### 4.3.2 Report Sample <a name="Interface_Error_ReportRep"/>
 
