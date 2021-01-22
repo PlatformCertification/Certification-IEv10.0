@@ -79,6 +79,7 @@ qualification:
 #### 2.1 Build Common Table and Digital Twin Table
 
 ![BuildDigitalTwin](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Enhanced%20Seed%20IP%20Checking.png)
+
 ***Note:*** From the **Digital Twin L2 Topology Table**, for device R1 interface E2, the neighbor interface IP is 3.3.3.3 as shown in the image. Although from the NDP table we can find the corresponding neighbor deivce is R4, but before we build the Digital Twin DB, the back end script will query each IP we have got from common table by internal API to detect whether there is a device object can be returned base on current IP. If there is no device object can be get then the current IP would be considered as a missing IP and inserted into the final enhanced IP report. And the corresponding neighbor device infomration(Neighbor Device, Neighbor Interface) also will be removed from Digital Twin Table.
 
 #### 2.2 Diagnosis Checking Logic
