@@ -32,6 +32,9 @@
   * 4.6. [To be deleted devices](#tobedelete)<br>
     * 4.6.1. [Included columns](#tobedeleteIn)<br>
     * 4.6.2. [Report Sample](#tobedeleteRep)<br>
+  * 4.7. [Not Qualified devices](#notqualified)<br>
+    * 4.7.1. [Included columns](#notqualifiedIn)<br>
+    * 4.7.2. [Report Sample](#notqualifiedRep)<br>
 * 5. [NetBrain Library Generation From Diagnosis Inputs](#NetBrainLib)<br>
 * 6. [Toolkit Operation Flow](#ToolkitFlow)<br>
 * 7. [Route Map](#Route)<br>
@@ -254,6 +257,15 @@ global_setting:
 #### 4.6.2 Report Sample <a name="tobedeleteRep"/>
 
 ![tobedelete](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/To%20be%20Deleted%20Device.png)
+
+### 4.7 Not Qualified devices <a name="notqualified"/>
+ 
+#### 4.7.1 Included columns <a name="notqualifiedIn"/>
+**Device:** the hostname of current device<br>**Device Type:** the device type of current device.<br>**Vendor and Model:** vender and model information of current device.<br>**Driver Name:** the corresponding driver which will be triggered when discover this device.
+
+#### 4.7.2 Report Sample <a name="notqualifiedRep"/>
+
+![tobedelete](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/NotQualifieddevice.png)
 
 ***For detail information about ErrorCode, please click [here](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Reports%20Error%20Code%20Detail.md).***
 
