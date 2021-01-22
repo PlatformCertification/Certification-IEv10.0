@@ -3,8 +3,6 @@
 ### 1.Certification Input
 #### 1.1 Input for NDP Table
 ```yaml
-cli_cmds:
-    - show cdp neighbor
 system_table: NDP Table
 variable_mapping:
     Local Interface: Interface
@@ -18,14 +16,10 @@ variable_mapping:
 
 #### 1.2 Input for MAC Table
 ```yaml
-cli_cmds:
-  - show mac table
 system_table: MAC Table
 variable_mapping:
   Port Name: Interface
-  Mac Address: Neighbor Interface MAC
 - index_variables:
-  - Neighbor Interface MAC
   - Interface
 ```
 
