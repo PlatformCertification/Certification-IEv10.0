@@ -3,8 +3,6 @@
 ### 1.Certification Input
 #### 1.1 Input for ARP Table
 ```yaml
-cli_cmds:
-    - show arp table
 system_table: ARP Table
 variable_mapping:
     Interface: Interface
@@ -17,8 +15,6 @@ variable_mapping:
 
 #### 1.2 Input for Route Table
 ```yaml
-cli_cmds:
-  - show ip route
 system_table: Route Table
 variable_mapping:
   OutIf: Interface
@@ -32,7 +28,7 @@ variable_mapping:
 ```yaml
 name: 'OSPF Neighbor Parser[Cisco]'
 input_datas:
-  - parser: >-
+  - parser: 
       Shared Files in Tenant/Certification Tool Parsers/OSPF Neighbors Detail [Cisco IOS]
     cli_cmds:
       - show ip ospf neighbor detail
