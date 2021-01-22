@@ -69,6 +69,6 @@ qualification:
 
 ![CheckingLogic](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Diagnosis%20Logic%20Checking.png)
 
-### 3. Important
+***Note***
 1. OSPF neighbors across devices are not considered
 2. If the neighbor device and neighbor interface cannot be found in the digital twin table, then it is not considered

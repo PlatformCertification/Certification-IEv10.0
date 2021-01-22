@@ -33,4 +33,4 @@ variable_mapping:
 
 ![CheckingLogic](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-L2%20Checking%20Logic.png)
 
-### 3. Important
+***Note***
