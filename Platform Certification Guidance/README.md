@@ -108,11 +108,11 @@ Define column relationships between parser table and common table.
 
 After all desired data source have been inserted, customer need to take more care of the "qualification" section next, we provide three kinds of qualification methods totally:
 
->1. qualification.gdr<br>
+1. qualification.gdr<br>
 Represent the GDR which will be considered aSs a filter for devices, e.g. vendor name, device type, etc.
->2. qualification.patterns<br>
+2. qualification.patterns<br>
 Represent the config patterns which will be considered as a filter for daignosis data.
->3. qualification.regexes<br>
+3. qualification.regexes<br>
 Represent the regex rules which will be considered as a filter for diagnosis data.
 
 If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
