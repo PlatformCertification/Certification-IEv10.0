@@ -215,7 +215,9 @@ global_setting:
 ### 4.4 Enhanced Seed File（To be Discovered） <a name="Enhanced_Seed_File"/>
  
 #### 4.4.1 Included columns <a name="Enhanced_Seed_FileIn"/>
-**IP List:** IPs which can be considered as a network device IP from device data( e.g. Routing table ) but only can be found in Unknown IP List.
+**IP List:** IPs which can be considered as a network device IP from device data( e.g. Routing table ) but only can be found in Unknown IP List.<br>
+**Source Information:** the data source where certification can detect this IP address.<br>
+**Reason:** The reason why this IP address should be enhanced.
 
 #### 4.4.2 Report Sample <a name="Enhanced_Seed_FileRep"/>
 
