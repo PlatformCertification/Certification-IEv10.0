@@ -27,8 +27,11 @@
     * 4.4.1. [Included columns](#Enhanced_Seed_FileIn)<br>
     * 4.4.2. [Report Sample](#Enhanced_Seed_FileRep)<br>
   * 4.5. [Change Zone list](#Change_Zone_list)<br>
-    * 4.4.1. [Included columns](#Change_Zone_listIn)<br>
-    * 4.4.2. [Report Sample](#Change_Zone_listRep)<br>
+    * 4.5.1. [Included columns](#Change_Zone_listIn)<br>
+    * 4.5.2. [Report Sample](#Change_Zone_listRep)<br>
+  * 4.6. [To be deleted devices](#tobedelete)<br>
+    * 4.6.1. [Included columns](#tobedeleteIn)<br>
+    * 4.6.2. [Report Sample](#tobedeleteRep)<br>
 * 5. [NetBrain Library Generation From Diagnosis Inputs](#NetBrainLib)<br>
 * 6. [Toolkit Operation Flow](#ToolkitFlow)<br>
 * 7. [Route Map](#Route)<br>
@@ -206,11 +209,14 @@ global_setting:
 
 ![ZonePreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Change%20Zone%20list.png)
 
-### 4.6 To be deleted devices <a name="List"/>
+### 4.6 To be deleted devices <a name="tobedelete"/>
  
-#### 4.6.1 Included columns <a name="List"/>
-**Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
+#### 4.6.1 Included columns <a name="tobedeleteIn"/>
+**Device:** the hostname of current device<br>**Management IP:** the management Ip of current device.<br>**Device Type:** the device type of current device.<br>**Vendor and Model:** vender and model information of current device.<br>**SysObjectID:** the SysObjectID value of current device.<br>**Last Access Succeed Time:** the last time point for NetBrain succeed to access(by Discover, Benchmark, Tune Live Access, Qapp, Live Path or any other live access method) to current device .<br>**Last Check Time:** the last time point for NetBrain failed to access to current device.<br>
 
+#### 4.6.2 Report Sample <a name="tobedeleteRep"/>
+
+![tobedelete](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/To%20be%20Deleted%20Device.png)
 
 ***For detail information about ErrorCode, please click [here](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Reports%20Error%20Code%20Detail.md).***
 
