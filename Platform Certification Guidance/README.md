@@ -211,6 +211,9 @@ global_setting:
 #### 4.6.1 Included columns <a name="List"/>
 **Device List:** two or more devices configured same interface information with more than 80% and not set as HA devices.
 
+
+***For detail information about ErrorCode, please click [here](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Reports%20Error%20Code%20Detail.md).***
+
 [***To Top***](#Contents)
 
 ## 5. NetBrain Library Generation From Diagnosis Inputs <a name="NetBrainLib"/>
