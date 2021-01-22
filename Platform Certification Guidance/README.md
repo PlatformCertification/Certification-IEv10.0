@@ -36,7 +36,7 @@
 * 6. [Toolkit Operation Flow](#ToolkitFlow)<br>
 * 7. [Route Map](#Route)<br>
 
-# [Back Ground](https://confluence.netbraintech.com/confluence/pages/viewpage.action?spaceKey=PD&title=Platform+Certification+Background)
+# [Background](https://confluence.netbraintech.com/confluence/pages/viewpage.action?spaceKey=PD&title=Platform+Certification+Background)
 
 **Current Issues**<br>
 Currently, the Solution/Platform/R&D Team is based on cases to make up for the problems found by customers. In this mode, there will be the following problems:
