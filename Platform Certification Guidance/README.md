@@ -44,15 +44,15 @@
 ### Current Issues
 Currently, the Solution/Platform/R&D Team is based on cases to make up for the problems found by customers. In this mode, there will be the following problems:
 
-1. If the customer has a problem, we do not have enough resources to deal with it in time
+1. Not enough resource solve the customer issues in time
 
-2. Since the customer found the problem, they may not be willing to share data, and the environment
+2. Customer found the issue and may not be willing to share data/env
 
-3. Our support for certain new technology and new function may not be applicable to all customers’ networks
+3. New technical support cannot be available to all customers
 
-4. Manually discovering and solving data accuracy issues during the deployment and adoption process also leads to a long time-consuming process.
+4. Manually discover and solve problems to extend the deployment/adoption time
 
-5. The customer has discovered the problem before it can be solved by the Platform Team, which affects the product's impression of the customer.
+5. Problem solving affects product impression after the customer finds it
 
 ### Solution
 Based on the above-mentioned problems and data analysis, introduce the Platform Certification process to proactively found and solve data accuracy problems in the customer's network through a set of tools.
