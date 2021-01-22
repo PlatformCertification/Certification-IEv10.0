@@ -30,8 +30,6 @@ name: 'OSPF Neighbor Parser[Cisco]'
 input_datas:
   - parser: 
       Shared Files in Tenant/Certification Tool Parsers/OSPF Neighbors Detail [Cisco IOS]
-    cli_cmds:
-      - show ip ospf neighbor detail
     variable_mapping:
       intf: Interface
       intf_addr: Neighbor Interface IP
