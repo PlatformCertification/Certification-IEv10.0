@@ -195,7 +195,7 @@ global_setting:
 
 #### 4.4.2 Report Sample <a name="Enhanced_Seed_FileRep"/>
 
-![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Enhanced%20Seed%20File%20(1).png)
+![SeedPreport](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/enhanced%20seed%20file.png)
 
 ### 4.5 Change Zone list <a name="Change_Zone_list"/>
  
