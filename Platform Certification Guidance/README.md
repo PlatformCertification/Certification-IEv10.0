@@ -36,6 +36,24 @@
 * 6. [Toolkit Operation Flow](#ToolkitFlow)<br>
 * 7. [Route Map](#Route)<br>
 
+# [Back Ground](https://confluence.netbraintech.com/confluence/pages/viewpage.action?spaceKey=PD&title=Platform+Certification+Background)
+
+**Current Issues**<br>
+Currently, the Solution/Platform/R&D Team is based on cases to make up for the problems found by customers. In this mode, there will be the following problems:
+
+1. If the customer has a problem, we do not have enough resources to deal with it in time
+
+2. Since the customer found the problem, they may not be willing to share data, and the environment
+
+3. Our support for certain new technology and new function may not be applicable to all customers’ networks
+
+4. Manually discovering and solving data accuracy issues during the deployment and adoption process also leads to a long time-consuming process.
+
+5. The customer has discovered the problem before it can be solved by the Platform Team, which affects the product's impression of the customer.
+
+**Solution**<br>
+Based on the above-mentioned problems and data analysis, introduce the Platform Certification process to proactively found and solve data accuracy problems in the customer's network through a set of tools.
+
 ## 1. OverView <a name="Over"/>
 
 
