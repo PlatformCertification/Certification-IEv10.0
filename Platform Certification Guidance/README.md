@@ -240,7 +240,7 @@ global_setting:
 ### 4.5 Change Zone list <a name="Change_Zone_list"/>
  
 #### 4.5.1 Included columns <a name="Change_Zone_listIn"/>
-**IP Subnet:** the IP subnet info which has been detected. <br> **Device:** the device hostname of current device which the IP subnet belongs to. <br> **Interface:** name of the interface which associate with current IP subnet. <br> **Interface IPMASK:** the IPMASK information of current interface. <br> **Zone Name:** name of the zone which the current IP subnet belongs to.
+**IP Subnet:** the IP subnet info which has been detected. <br> **Device:** the device hostname of current device which the IP subnet belongs to. <br> **Interface:** name of the interface which associate with current IP subnet. <br> **Interface IPMASK:** the IPMASK information of current interface. <br> **Source:** Represent the current IP Subnet detected from Duplicate IP Checking or Duplicate Subnet Checking.<br> **Zone Name:** name of the zone which the current IP subnet belongs to.
 
 #### 4.5.2 Report Sample <a name="Change_Zone_listRep"/>
 
