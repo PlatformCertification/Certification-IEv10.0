@@ -138,7 +138,7 @@ Customer need to insert all corresponding values for each attribute in this sect
 **Simplified Input Sample:**
 ```yaml
 ---
-dianosis_inputs:
+diagnosis_inputs:
 - name: L3 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
   inputs:
