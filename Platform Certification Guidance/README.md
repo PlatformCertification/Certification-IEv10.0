@@ -141,10 +141,10 @@ Customer need to insert all corresponding values for each attribute in this sect
 diagnosis_inputs:
 - name: L3 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
+  common_table_name: L3 Neighbor Data Common Table
   inputs:
   - name: System Table Inputs[All Vendors] # Name of current data input.
     input_datas:
-      common_table_name: L3 Neighbor Data Common Table
     - parser: "Shared Files in Tenant/Certification Tool Parsers/OSPF Neighbors Detail [Cisco IOS]"
       system_table: ARP Table # parser or system_table can only have one in each input_datas block
       variable_mapping:

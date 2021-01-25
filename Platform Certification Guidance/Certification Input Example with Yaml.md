@@ -5,10 +5,10 @@
 dianosis_inputs:
 - name: L3 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
+  common_table_name: L3 Neighbor Data Common Table
   inputs:
   - name: L3 Neighbor Data # Name of current data input.
     input_datas:
-      common_table_name: L3 Neighbor Data Common Table
     - parser: ""
       system_table: ARP Table
       variable_mapping:
@@ -53,10 +53,10 @@ dianosis_inputs:
       
 - name: L2 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
+  common_table_name: L2 Neighbor Data Common Table
   inputs:
   - name: L2 Neighbor Data # Name of current data input.
     input_datas:
-      common_table_name: L2 Neighbor Data Common Table
     - parser: ""
       system_table: NDP Table
       variable_mapping:
@@ -83,10 +83,10 @@ dianosis_inputs:
     
 - name: Interface Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
+  common_table_name: Interface Data Common Table
   inputs:
   - name: Interface Parser[Cisco] # Name of current data input.
     input_datas:
-      common_table_name: Interface Data Common Table
     - parser: "Shared Files in Tenant/Certification Tool Parsers/IP Interface [Cisco IOS]"
       system_table: 
       variable_mapping:
