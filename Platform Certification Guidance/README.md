@@ -4,7 +4,6 @@
 ## Contents <a name="Contents"/>
 * 1. [OverView](#Over)<br>
   * 1.1. [ToolKit Architecture](#ToolKit)<br>
-  * 1.2. [Detected Issues](#Detected)<br>
 * 2. [Input](#Input)<br>
   * 2.1. [Certification Input Blocks](#Certification)<br>
     * 2.1.1. [Diagnosis Inputs Block](#Diagnosis)<br>
@@ -72,21 +71,6 @@ The main purpose of platform certification plugin is applying the accuracy error
 **Certification Degital Twin Table Generate [Sample](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Sample-modified.png)**
 
 ![CommonTable](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification%20(1)-Sample.png)
-
-### 1.2 Detected Issues <a name="Detected"/>
-1. Duplicate IP Checking 
-2. CLI Command Issue Incorrect  
-3. Prompt Issue   
-4. New Driver Issue  
-5. New Format Issue  
-6. SNMP Only 
-7. SNMP No Support  
-8. OID Incorrect  
-9. Virtual System  
-10. L2 Topology Checking 
-11. L3 Topology Checking 
-12. Configuration Failed  
-13. Fixing by Add Zone
 
 [***To Top***](#Contents)
     
