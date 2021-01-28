@@ -71,7 +71,7 @@ The main purpose of platform certification plugin is applying the accuracy error
 
 **Certification Degital Twin Table Generate [Sample](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Sample-modified.png)**
 
-![CommonTable](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification-Sample.png)
+![CommonTable](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification%20(1)-Sample.png)
 
 ### 1.2 Detected Issues <a name="Detected"/>
 1. Duplicate IP Checking 
