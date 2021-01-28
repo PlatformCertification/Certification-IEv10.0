@@ -1,0 +1,30 @@
+name: Interface Parser[Cisco]
+devices: []
+input_datas:
+- parser: Built-in Files/Certification Tool/Cisco IOS/IP Interface [CiscoIOS]
+  system_table: ''
+  variable_mapping:
+    $intf: Intf
+    $ip_addr: IntfIP
+  index_variables:
+  - Intf
+  cli_cmds:
+  - show ip interface
+- parser: Built-in Files/Certification Tool/Cisco IOS/Interface [Cisco IOS]
+  system_table: ''
+  variable_mapping:
+    $intf: Intf
+    $mac_addr: IntfMac
+  index_variables:
+  - Intf
+  cli_cmds:
+  - show interface
+qualification:
+  gdr:
+    conditions:
+    - value: 'Cisco '
+      operator: 4
+      schema: subTypeName
+    expression: A
+  patterns: []
+  regexes: []

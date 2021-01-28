@@ -1,0 +1,25 @@
+diagnosis_functions:
+- Enhanced Seed IP Checking
+- L3 Neighbor Checking
+- L2 Neighbor checking
+- Duplicate IP Checking
+- Duplicate IP Fixing
+- Duplicate Subnet Checking
+- Duplicate Subnet Fixing
+global_setting:
+  device_scope:
+    scope_option: 0
+    scope_names:
+    - BJ_L2_Core_3
+    - BJ-L2-Core-A
+    - BJ-L2-coreB
+    description: 'Scope Option: 0 is All device, 1 is Device Group, 2 is Site, 3 is
+      Device Name.'
+  white_ip_list: []
+  enable_whilte_ip_list: true
+  debug_options:
+    log_level: 0
+    build_common_table_from_inputs: true
+    build_digital_twin: true
+    run_diagnosis: true
+    use_parser_cache_data: false

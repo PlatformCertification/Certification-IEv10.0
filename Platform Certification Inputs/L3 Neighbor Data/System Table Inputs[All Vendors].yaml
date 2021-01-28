@@ -1,0 +1,25 @@
+name: System Table Inputs[All Vendors]
+devices: []
+input_datas:
+- parser: ''
+  system_table: ARP Table
+  variable_mapping:
+    Interface: Intf
+    IP Address: NbrIntfIP
+    MAC Address: NbrIntfMAC
+  index_variables:
+  - Intf
+  - NbrIntfIP
+  cli_cmds:
+  - show arp table
+- parser: ''
+  system_table: Route Table
+  variable_mapping:
+    OutIf: Intf
+    NextHop: NbrIntfIP
+  index_variables:
+  - NbrIntfIP
+  - Intf
+  cli_cmds:
+  - show ip route
+qualification:

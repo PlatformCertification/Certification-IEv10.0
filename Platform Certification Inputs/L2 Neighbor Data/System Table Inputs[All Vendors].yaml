@@ -1,0 +1,25 @@
+name: System Table Inputs[All Vendors]
+description: ''
+devices: []
+input_datas:
+- parser: ''
+  system_table: NDP Table
+  variable_mapping:
+    Local Interface: Intf
+    Interface Address: NbrIntfIP
+    Interface Name: NbrIntf
+    Device Name: NbrDev
+  index_variables:
+  - Intf
+  - NbrIntf
+  cli_cmd:
+  - show cdp neighbor
+- parser: ''
+  system_table: MAC Table
+  variable_mapping:
+    Port Name: Intf
+  index_variables:
+  - Intf
+  cli_cmd:
+  - show mac table
+qualification:

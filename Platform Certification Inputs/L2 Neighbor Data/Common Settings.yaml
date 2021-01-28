@@ -1,0 +1,4 @@
+name: L2 Neighbor Data # 'For diagnosis function: L2 Neighbor Checking'
+enable: true
+common_table_name: Common L2 Neighbor Table
+inputs: []

@@ -1,0 +1,24 @@
+name: OSPF Neighbor Parser[Juniper]
+devices: []
+input_datas:
+- parser: Built-in Files/Certification Tool/Cisco IOS/OSPF Neighbors Detail[Juniper]
+  system_table: ''
+  variable_mapping:
+    $intf: Intf
+    $intf_addr: NbrIntfIP
+    $area_id: AreaID
+  index_variables:
+  - Intf
+  - NbrIntfIP
+  cli_cmds:
+  - show ospf neighbor detail
+qualification:
+  gdr:
+    conditions:
+    - value: 'Juniper '
+      operator: 4
+      schema: subTypeName
+    expression: A
+  patterns: []
+  regexes:
+  - 'mregex:ospf[0-9]* { area '

@@ -1,0 +1,5 @@
+name: L3 Neighbor Data # 'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
+enable: true
+common_table_name: Common L3 Neighbor Table
+inputs: []
+

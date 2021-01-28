@@ -1,0 +1,4 @@
+name: Interface Data # 'For diagnosis function: L2/L3 Neighbor Checking, Duplicate IP Fixing'
+enable: true
+common_table_name: Common Interface Table
+inputs: []
