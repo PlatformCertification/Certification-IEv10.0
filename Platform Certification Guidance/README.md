@@ -139,47 +139,43 @@ Customer need to insert all corresponding values for each attribute in this sect
 ```yaml
 ---
 diagnosis_inputs:
-- name: L3 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
+- name: L3 Neighbor Data # 'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
-  common_table_name: L3 Neighbor Data Common Table
+  common_table_name: Common L3 Neighbor Table
   inputs:
-  - name: Inputs Sample[All Vendors] # Name of current data input.
+  - name: OSPF Neighbor Parser[Juniper]
     input_datas:
-    - parser: "Shared Files in Tenant/Certification Tool Parsers/OSPF Neighbors Detail [Cisco IOS]"
-      system_table: ARP Table # parser or system_table can only have one in each input_datas block
+    - parser: Built-in Files/Certification Tool/Cisco IOS/OSPF Neighbors Detail[Juniper]
+      system_table: ''
       variable_mapping:
-        Interface: Interface
-        IP Address: Neighbor Interface IP
-        MAC Address: Neighbor Interface MAC
-        Area ID: Interface Area ID
+        $intf: Intf
+        $intf_addr: NbrIntfIP
+        $area_id: AreaID
       index_variables:
-      - Interface
-      - Interface IP
-      extend_common_variables:
-      - Interface Area ID
+      - Intf
+      - NbrIntfIP
     qualification:
       gdr:
         conditions:
-        - value: 'Cisco'
+        - value: 'Juniper '
           operator: 4
           schema: subTypeName
         expression: A
-      patterns:
-      - "interface $str:intfName1"
-      - "ip address $ip:ip1 $ip:mask1"
+      patterns: []
       regexes:
-      - "regex:router ospf [0-9]+"
+      - 'mregex:ospf[0-9]* { area '
 diagnosis_functions:
-  - L3 Neighbor Checking # Report Missing/Wrong L3 topology, Missing Devices..
-  - L2 Neighbor Checking # Report Missing/Wrong L2 topology, Missing Devices..
-  - Duplicate IP Checking
-  - Multi-Vendor Collection
-  #- Duplicate IP Fixing
+- L3 Neighbor Checking
 global_setting:
+  device_scope:
+    scope_option: 0
+    scope_names:
+    - BJ_L2_Core_3
+    description: 'Scope Option: 0 is All device, 1 is Device Group, 2 is Site, 3 is Device Name.'
   white_ip_list: []
   enable_whilte_ip_list: true
   debug_options:
-    log_level: 3
+    log_level: 0
     build_common_table_from_inputs: true
     build_digital_twin: true
     run_diagnosis: true
