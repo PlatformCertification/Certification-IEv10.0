@@ -82,7 +82,7 @@ The main purpose of platform certification plugin is applying the accuracy error
 **diagnosis_inputs**<br>
 Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
-**diagnosis_inputs.inputs**<br>
+**inputs**<br>
 As the most important section of certification_inputs, customer must review all attributes which belongs current component in [Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md). 
 
 To define the input data source, the most important three sectoins are:
@@ -123,47 +123,44 @@ Customer need to insert all corresponding values for each attribute in this sect
 ```yaml
 ---
 diagnosis_inputs:
-- name: L3 Neighbor Data # 'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
-  enable: true
-  common_table_name: Common L3 Neighbor Table
-  inputs:
-  - name: OSPF Neighbor Parser[Juniper]
-    input_datas:
-    - parser: Built-in Files/Certification Tool/Cisco IOS/OSPF Neighbors Detail[Juniper]
-      system_table: ''
-      variable_mapping:
-        $intf: Intf
-        $intf_addr: NbrIntfIP
-        $area_id: AreaID
-      index_variables:
-      - Intf
-      - NbrIntfIP
-    qualification:
-      gdr:
-        conditions:
-        - value: 'Juniper '
-          operator: 4
-          schema: subTypeName
-        expression: A
-      patterns: []
-      regexes:
-      - 'mregex:ospf[0-9]* { area '
+  - nb_cert_system_table
+  - nb_cert_cisco_ios
+  - nb_cert_cisco_ios_xr
+  - nb_cert_cisco_nxos
+  - nb_cert_f5_load_balancer
+  - nb_cert_junos
+  - nb_cert_checkpoint
+  #- nb_cert_arista_switch
+  #- nb_cert_alu_router
+  #- nb_cert_wlc
+  #- nb_cert_fortinet_firewall
+  #- nb_cert_palo_alto_firewall
+  #- nb_cert_asa
+  - my_cert_cisco_ios # copy from nb_cert_cisco_ios
+  - my_cert_1 # write the new, include nxos, xr
+  - my_cert_2 # mixed input
+diagnosis_precheck:
+  - dx_precheck_qualification_coverage
 diagnosis_functions:
-- L3 Neighbor Checking
-global_setting:
-  device_scope:
-    scope_option: 0
-    scope_names:
-    - BJ_L2_Core_3
-    description: 'Scope Option: 0 is All device, 1 is Device Group, 2 is Site, 3 is Device Name.'
-  white_ip_list: []
-  enable_whilte_ip_list: true
-  debug_options:
-    log_level: 0
-    build_common_table_from_inputs: true
-    build_digital_twin: true
-    run_diagnosis: true
-    use_parser_cache_data: false
+  - dx_checking_enhanced_seed_ip
+  - dx_checking_l3_neighbor
+  - dx_checking_l2_neighbor
+  - dx_checking_duplicate_ip
+  - dx_checking_duplicate_subnet
+  - dx_fixing_duplicate_ip
+  - dx_fixing_duplicate_subnet
+white_ip_list: white_ip_list
+run_mode: 1 # 0:only pre-check,1:normal run
+device_scope:
+  scope_option: 0 #  0 All device, 1 Device Group, 2 Site, 3 Device Name.
+  scope_names:
+    #- site_name
+debug_options:
+  log_level: 0
+  build_common_table_from_inputs: true
+  build_digital_twin: true
+  run_diagnosis: true
+  use_parser_cache_data: false
 ```
 
 [***To Top***](#Contents)
