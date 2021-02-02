@@ -1,7 +1,7 @@
 ## Certification Inputs Example with Yaml
 
 ### Certification Plugin Sample in IE
-[image](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification%20Plugin%20Sample%20in%20IE.png)
+![image](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/images/Certification%20Plugin%20Sample%20in%20IE.png)
 
 ### Inputs Yaml Sample
 
