@@ -1,135 +1,176 @@
-## Certification Input Example with Yaml
+## Certification Inputs Example with Yaml
+
+### Inputs Yaml Sample
 
 ```Yaml
 ---
-dianosis_inputs:
-- name: L3 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
+certificate_methods:
+  - nb_cert_method_system_table
+  - nb_cert_method_cisco_ios
+  - nb_cert_method_cisco_ios_xr
+  - nb_cert_method_cisco_nxos
+  - nb_cert_method_f5_load_balancer
+  - nb_cert_method_junos
+  - nb_cert_method_checkpoint
+  #- nb_cert_method_arista_switch
+  #- nb_cert_method_alu_router
+  #- nb_cert_method_wlc
+  #- nb_cert_method_fortinet_firewall
+  #- nb_cert_method_palo_alto_firewall
+  #- nb_cert_method_asa
+  - my_cert_method_cisco_ios # copy from nb_cert_cisco_ios
+  - my_cert_method_1 # write the new, include nxos, xr
+  - my_cert_method_2 # mixed input
+diagnosis_precheck:
+  - dx_precheck_qualification_coverage
+diagnosis_checking:
+  - dx_checking_enhanced_seed_ip
+  - dx_checking_l3_neighbor
+  - dx_checking_l2_neighbor
+  - dx_checking_duplicate_ip
+  - dx_checking_duplicate_subnet
+dignosis_fixing:
+  - dx_fixing_duplicate_ip
+  - dx_fixing_duplicate_subnet
+data_collection: data_collection
+white_ip_list: white_ip_list
+run_mode: 1,2,3 # 0:only pre-check,1:checking, 2:fixing, 3: collect data
+device_scope:
+  scope_option: 0 #  0 All device, 1 Device Group, 2 Site, 3 Device Name.
+  scope_names:
+    #- site_name
+debug_options:
+  log_level: 0
+  build_common_table_from_inputs: true
+  build_digital_twin: true
+  run_diagnosis: true
+  use_parser_cache_data: false
+```
+
+### White IP List Python Sample
+
+**white_ip_list.py**
+```python 
+white_ip_list = """---
+- ip: 127.1.1.1
+  description: Loopback
+- ip: 6.11.1.1
+  description: IP from Internet
+- ip: 6.11.1.1
+  description: IP from Internet"""
+```
+
+### Diagnosis Inputs Samples
+
+**nb_cert_cisco_ios.py**
+```python
+cert_input = '''
+- name: L3 Neighbor Data # 'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
-  common_table_name: L3 Neighbor Data Common Table
+  common_table_name: Common L3 Neighbor Table
   inputs:
-  - name: L3 Neighbor Data # Name of current data input.
+  - name: OSPF Neighbor Parser[Cisco]
     input_datas:
-    - parser: ""
-      system_table: ARP Table
+    - parser: Built-in Files/Certification Tool/Cisco IOS/OSPF Neighbors Detail[Cisco IOS]
       variable_mapping:
-        Interface: Interface
-        IP Address: Neighbor Interface IP
-        MAC Address: Neighbor Interface MAC
+        $intf: Intf
+        $intf_addr: NbrIntfIP
+        $area_id: AreaID
       index_variables:
-      - Interface
-      - Neighbor Interface IP
-      extend_common_variables:
-    - parser: ""
-      system_table: Route Table
-      variable_mapping:
-        OutIf: Interface
-        NextHop: Neighbor Interface IP
-      index_variables:
-      - Interface
-      - Neighbor Interface IP
-      extend_common_variables:  
-      
-    - parser: "Shared Files in Tenant/Certification Tool Parsers/OSPF Neighbors Detail [Cisco IOS]"
-      variable_mapping:
-        intf: Interface
-        intf_addr: Neighbor Interface IP
-        area_id: Area ID
-      index_variables:
-      - Interface
-      - Neighbor Interface IP
-      extend_common_variables:
-      
+      - Intf
+      - NbrIntfIP
+      cli_cmds:
+      - show ip ospf neighbor detail
     qualification:
       gdr:
         conditions:
-        - value: 'Cisco Router'
+        - value: 'Cisco '
           operator: 4
           schema: subTypeName
         expression: A
-      patterns:
-      
+      patterns: []
       regexes:
-      - "regex:router ospf [0-9]+"
-      
-- name: L2 Neighbor Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
+      - regex:router ospf [0-9]+
+- name: Interface Data # 'For diagnosis function: L2/L3 Neighbor Checking, Duplicate IP Fixing'
   enable: true
-  common_table_name: L2 Neighbor Data Common Table
+  common_table_name: Common Interface Table
   inputs:
-  - name: L2 Neighbor Data # Name of current data input.
+  - name: Interface Parser[Cisco]
     input_datas:
-    - parser: ""
-      system_table: NDP Table
+    - parser: Built-in Files/Certification Tool/Cisco IOS/IP Interface [CiscoIOS]
       variable_mapping:
-        Local Interface: Interface
-        Interface Address: Neighbor Interface IP
-        Interface Name: Neighbor Interface
-        Device Name: Neighbor Device
+        $intf: Intf
+        $ip_addr: IntfIP
       index_variables:
-      - Interface
-      - Neighbor Interface
-      extend_common_variables:
-      
-    - parser: ""
-      system_table: MAC Table
+      - Intf
+      cli_cmds:
+      - show ip interface
+    - parser: Built-in Files/Certification Tool/Cisco IOS/Interface [Cisco IOS]
       variable_mapping:
-        Port Name: Interface
-        Mac Address: Neighbor Interface MAC
+        $intf: Intf
+        $mac_addr: IntfMac
       index_variables:
-      - Interface
-      - Neighbor Interface MAC
-      extend_common_variables:  
-      
-    qualification:
-    
-- name: Interface Data #'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
-  enable: true
-  common_table_name: Interface Data Common Table
-  inputs:
-  - name: Interface Parser[Cisco] # Name of current data input.
-    input_datas:
-    - parser: "Shared Files in Tenant/Certification Tool Parsers/IP Interface [Cisco IOS]"
-      system_table: 
-      variable_mapping:
-        intf: Interface
-        ip_addr: Interface IP
-      index_variables:
-      - Interface
-      extend_common_variables:
-      
-    - parser: "Shared Files in Tenant/Certification Tool Parsers/Interface [Cisco IOS]"
-      system_table: 
-      variable_mapping:
-        intf: Interface
-        mac_addr: Interface MAC
-      index_variables:
-      - Interface
-      extend_common_variables:  
-      
+      - Intf
+      cli_cmds:
+      - show interface
     qualification:
       gdr:
         conditions:
-        - value: 'Cisco'
+        - expression: 'Cisco '
           operator: 4
           schema: subTypeName
         expression: A
-      patterns:
-      
-      regexes:
-      
-  
-diagnosis_functions:
-  - L3 Neighbor Checking # Report Missing/Wrong L3 topology, Missing Devices..
-  - L2 Neighbor Checking # Report Missing/Wrong L2 topology, Missing Devices..
-  - Duplicate IP Checking
-  - Multi-Vendor Collection
-  #- Duplicate IP Fixing
-global_setting:
-  white_ip_list: []
-  enable_whilte_ip_list: true
-  debug_options:
-    log_level: 0
-    build_common_table_from_inputs: true
-    build_digital_twin: true
-    run_diagnosis: true
-    use_parser_cache_data: false
+      patterns: []
+      regexes: []
+'''
+```
+
+**nb_cert_system_table.py**
+```python
+cert_input = '''
+- name: L3 Neighbor Data # 'For diagnosis function: L3 Neighbor Checking, Duplicate IP Fixing'
+  enable: true
+  common_table_name: Common L3 Neighbor Table
+  inputs:
+  - name: System Table Inputs[All Vendors]
+    input_datas:
+    - system_table: ARP Table
+      variable_mapping:
+        Interface: Intf
+        IP Address: NbrIntfIP
+        MAC Address: NbrIntfMAC
+      index_variables:
+      - Intf
+      - NbrIntfIP
+    - system_table: Route Table
+      variable_mapping:
+        OutIf: Intf
+        NextHop: NbrIntfIP
+      index_variables:
+      - NbrIntfIP
+      - Intf
+- name: L2 Neighbor Data # 'For diagnosis function: L2 Neighbor Checking'
+  enable: true
+  common_table_name: Common L2 Neighbor Table
+  inputs:
+  - name: System Table Inputs[All Vendors]
+    description: ''
+    input_datas:
+    - system_table: NDP Table
+      variable_mapping:
+        Local Interface: Intf
+        Interface Address: NbrIntfIP
+        Interface Name: NbrIntf
+        Device Name: NbrDev
+      index_variables:
+      - Intf
+      - NbrIntf
+      cli_cmd:
+      - show cdp neighbor
+    - system_table: MAC Table
+      variable_mapping:
+        Port Name: Intf
+      index_variables:
+      - Intf
+'''
 ```
