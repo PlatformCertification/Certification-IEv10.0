@@ -3,12 +3,13 @@
 |Name|Type|Description|
 | --- | --- | --- |
 | diagnosis_inputs | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file means one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
-| diagnosis_functions | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis function name. All diagnosis functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |
-| white_ip_list | List of String | Represent all IPs that need to be ignored by the current plugin during plugin running. |
-| run_mode | Integer | Represent all IPs that need to be ignored by the current plugin during plugin running. |
-| device_scope | List of String | Represent all IPs that need to be ignored by the current plugin during plugin running. |
-| device_scope.scope_option | List of String | Represent all IPs that need to be ignored by the current plugin during plugin running. |
-| device_scope.scope_names | List of String | Represent all IPs that need to be ignored by the current plugin during plugin running. |
+| diagnosis_precheck | List of String | List all available pre-check incurrent plugin.| 
+| diagnosis_functions | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis function name. All diagnosis functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
+| white_ip_list | One Python File with one large string | Represent all IPs that need to be ignored by the current plugin during plugin running. |
+| run_mode | List of Integer | Represent the running mode of current plugin. 0: only pre-check, 1: normal run. |
+| device_scope | Object | Represent the device scope information of current plugin. |
+| device_scope.scope_option | Integer | Represent the type of device scope which will considered in current plugin. 0: All device, 1: Device Group, 2: Site, 3: Device Name.|
+| device_scope.scope_names | string | depands on which device scope will be inserted in current plugin. If the value of scope_option is 0, no need to insert this value, if scope_option is 1 then a device group name must be provided. |
 | debug_options | Object | Define the debug features of current diagnosis process. |
 | debug_options.build_common_table_from_inputs | Boolean | Represent whether build the common table base on customer inputs. |
 | debug_options.build_digital_twin | Boolean | Represent whether build the digital twin table base on customer inputs. |
