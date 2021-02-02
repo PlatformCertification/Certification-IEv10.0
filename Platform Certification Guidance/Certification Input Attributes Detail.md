@@ -2,7 +2,7 @@
 
 |Name|Type|Description|
 | --- | --- | --- |
-| diagnosis_inputs | List of Object | Define the entire data inputs for the entire following diagnosis process.|
+| diagnosis_inputs | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file means one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
 | diagnosis_functions | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis function name. All diagnosis functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |
 | white_ip_list | List of String | Represent all IPs that need to be ignored by the current plugin during plugin running. |
 | run_mode | Integer | Represent all IPs that need to be ignored by the current plugin during plugin running. |
@@ -16,7 +16,7 @@
 | debug_options.use_parser_cache_data | Boolean | Represent whether trigger the entire plugin use parser cache data. |
 | debug_options.log_level | Integer | Represent the level that the customer wants to apply to the plugin running logs. (0: DEBUG, 1: INFO, 2: WARNING, 3: ERROR) |
 
-## Certification Input Attributes Detail Introduction
+## Certification Input Attributes Detail Introduction <a name="subTable"/>
 
 |Name|Type|Description|
 | --- | --- | --- |
