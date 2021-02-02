@@ -41,3 +41,5 @@
 | inputs.qualification.gdr.conditions.schema | String | Define current GDR key, check GDR management in tenant management page. |
 | inputs.qualification.patterns | List of String | Represent the config patterns which will be considered as a filter for daignosis data. |
 | inputs.qualification.regexes | List of String | Represent the regex rules which will be considered as a filter for diagnosis data. |
+
+***For input sample, please click [here](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Example%20with%20Yaml.md).***
