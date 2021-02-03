@@ -6,6 +6,7 @@
 | diagnosis_precheck | List of String | List all available pre-check incurrent plugin. (This element should only be modified by platform engineers.)| 
 | diagnosis_checking | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis checking name. All diagnosis checking functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
 | diagnosis_fixing | List of String | List all provided fixing functions for current platform certification plugin by diagnosis function name. All diagnosis fixing precesses will be triggered automatically when the plugin start to run. If customer desire to apply partial fixing functions in current plugin, please comment out the functions which will be ignored. |  
+| data_collection | python file with string | define the data type which we will collect from customer environment.|
 | white_ip_list | One Python File with one string | Represent all IPs that need to be ignored by the current plugin during plugin running. |
 | run_mode | List of Integer | Represent the running mode of current plugin. 0: only pre-check, 1: normal run. |
 | device_scope | Object | Represent the device scope information of current plugin. |
