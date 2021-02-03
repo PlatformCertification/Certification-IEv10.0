@@ -54,13 +54,9 @@ debug_options:
 
 **white_ip_list.py**
 ```python 
-white_ip_list = """---
-- ip: 127.1.1.1
-  description: Loopback
-- ip: 6.11.1.1
-  description: IP from Internet
-- ip: 6.11.1.1
-  description: IP from Internet"""
+white_ip_list = """
+    127.1.1.1
+    127.1.1.2, IP from Internet"""
 ```
 
 ### Diagnosis Inputs Samples
