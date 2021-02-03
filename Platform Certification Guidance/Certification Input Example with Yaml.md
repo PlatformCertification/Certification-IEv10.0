@@ -37,7 +37,7 @@ dignosis_fixing:
   - dx_fixing_duplicate_subnet
 data_collection: data_collection
 white_ip_list: white_ip_list
-run_mode: 1 # 0:only pre-check,1:checking, 2:fixing, 3: collect data
+run_mode: 1 
 device_scope:
   scope_option: 0 #  0 All device, 1 Device Group, 2 Site, 3 Device Name.
   scope_names:
