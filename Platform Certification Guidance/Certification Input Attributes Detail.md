@@ -2,10 +2,10 @@
 
 |Name|Type|Description|
 | --- | --- | --- |
-| diagnosis_inputs | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file means one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
-| diagnosis_precheck | List of String | List all available pre-check incurrent plugin.| 
+| diagnosis_inputs | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file only contains a large string with yaml structure to define one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
+| diagnosis_precheck | List of String | List all available pre-check incurrent plugin. (This element should only be modified by platform engineers.)| 
 | diagnosis_functions | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis function name. All diagnosis functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
-| white_ip_list | One Python File with one large string | Represent all IPs that need to be ignored by the current plugin during plugin running. |
+| white_ip_list | One Python File with one string | Represent all IPs that need to be ignored by the current plugin during plugin running. |
 | run_mode | List of Integer | Represent the running mode of current plugin. 0: only pre-check, 1: normal run. |
 | device_scope | Object | Represent the device scope information of current plugin. |
 | device_scope.scope_option | Integer | Represent the type of device scope which will considered in current plugin. 0: All device, 1: Device Group, 2: Site, 3: Device Name.|

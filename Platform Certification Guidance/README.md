@@ -122,35 +122,37 @@ Customer need to insert all corresponding values for each attribute in this sect
 **Simplified Input Sample:**
 ```yaml
 ---
-diagnosis_inputs:
-  - nb_cert_system_table
-  - nb_cert_cisco_ios
-  - nb_cert_cisco_ios_xr
-  - nb_cert_cisco_nxos
-  - nb_cert_f5_load_balancer
-  - nb_cert_junos
-  - nb_cert_checkpoint
-  #- nb_cert_arista_switch
-  #- nb_cert_alu_router
-  #- nb_cert_wlc
-  #- nb_cert_fortinet_firewall
-  #- nb_cert_palo_alto_firewall
-  #- nb_cert_asa
-  - my_cert_cisco_ios # copy from nb_cert_cisco_ios
-  - my_cert_1 # write the new, include nxos, xr
-  - my_cert_2 # mixed input
+diagnosis_methods:
+  - nb_dx_method_system_table
+  - nb_dx_method_cisco_ios
+  - nb_dx_method_cisco_ios_xr
+  - nb_dx_method_cisco_nxos
+  - nb_dx_method_f5_load_balancer
+  - nb_dx_method_junos
+  - nb_dx_method_checkpoint
+  #- nb_dx_method_arista_switch
+  #- nb_dx_method_alu_router
+  #- nb_dx_method_wlc
+  #- nb_dx_method_fortinet_firewall
+  #- nb_dx_method_palo_alto_firewall
+  #- nb_dx_method_asa
+  - my_dx_method_cisco_ios # copy from nb_cert_cisco_ios
+  - my_dx_method_1 # write the new, include nxos, xr
+  - my_dx_method_2 # mixed input
 diagnosis_precheck:
   - dx_precheck_qualification_coverage
-diagnosis_functions:
+diagnosis_checking:
   - dx_checking_enhanced_seed_ip
   - dx_checking_l3_neighbor
   - dx_checking_l2_neighbor
   - dx_checking_duplicate_ip
   - dx_checking_duplicate_subnet
+dignosis_fixing:
   - dx_fixing_duplicate_ip
   - dx_fixing_duplicate_subnet
+data_collection: data_collection
 white_ip_list: white_ip_list
-run_mode: 1 # 0:only pre-check,1:normal run
+run_mode: 1,2,3 # 0:only pre-check,1:checking+fixing, 3: collect data
 device_scope:
   scope_option: 0 #  0 All device, 1 Device Group, 2 Site, 3 Device Name.
   scope_names:
