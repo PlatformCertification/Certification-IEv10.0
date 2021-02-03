@@ -79,7 +79,7 @@ The main purpose of platform certification plugin is applying the accuracy error
 ### 2.1 Certification Input Blocks <a name="ToolCertificationKit"/>
 
 #### 2.1.1. Diagnosis Inputs Block <a name="Diagnosis"/>
-**diagnosis_inputs**<br>
+**diagnosis_methods**<br>
 Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
 
 **inputs**<br>
