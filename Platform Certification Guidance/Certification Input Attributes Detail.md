@@ -39,7 +39,8 @@
 | inputs.qualification.gdr.expression | Boolean | Represent the logic relationship between each gdr_qulification conditions. (A AND B OR C AND D...) |
 | inputs.qualification.gdr.conditions | List of String  | Represent which GDRs would be considered as conditions for qualification. ["vendor", "device_type", ...] |
 | inputs.qualification.gdr.conditions.value | String | Define the value corresponding to the schema which inserted in current "condition". |
-| inputs.qualification.gdr.conditions.operator | Integer | Define the operator of current condition. E.g. {subTypeName(schema) 4(operator) Cisco(value)} ==> {subTypeName = Cisco} |
+| inputs.qualification.gdr.conditions.operator | Integer | Define the operator of current condition. E.g. {subTypeName(schema) 4(operator) Cisco(value)} ==> {subTypeName = Cisco}<br>  Operator: {Match = 0, NotMatch = 1, Equal = 2, NotEqual = 3, Contain = 4, NotContain = 5, GreatThan = 6, LessThan = 7, GreateThanOrEqual = 8, LessThanOrEqual = 9}
+|
 | inputs.qualification.gdr.conditions.schema | String | Define current GDR key, check GDR management in tenant management page. |
 | inputs.qualification.patterns | List of String | Represent the config patterns which will be considered as a filter for daignosis data. |
 | inputs.qualification.regexes | List of String | Represent the regex rules which will be considered as a filter for diagnosis data. |
