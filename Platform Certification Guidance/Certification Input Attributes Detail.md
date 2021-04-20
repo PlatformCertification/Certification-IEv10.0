@@ -2,16 +2,34 @@
 
 |Name|Type|Description|
 | --- | --- | --- |
-| diagnosis_inputs | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file only contains a large string with yaml structure to define one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
-| diagnosis_precheck | List of String | List all available pre-check incurrent plugin. (This element should only be modified by platform engineers.)| 
-| diagnosis_checking | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis checking name. All diagnosis checking functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
-| diagnosis_fixing | List of String | List all provided fixing functions for current platform certification plugin by diagnosis function name. All diagnosis fixing precesses will be triggered automatically when the plugin start to run. If customer desire to apply partial fixing functions in current plugin, please comment out the functions which will be ignored. |  
-| data_collection | python file with string | define the data type which we will collect from customer environment.|
+| diagnosis_methods | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file only contains a large string with yaml structure to define one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
+| run_setting | ### | ### | 
+| run_setting.qualification | ### | ### |
+| run_setting.qualification.enable | ### | ### |
+| run_setting.qualification.names | ### | ### |
+| run_setting.benchmark | ### | ### |
+| run_setting.benchmark.enable | ### | ### |
+| run_setting.benchmark.names | ### | ### |
+| run_setting.diagnosis_checking | ### | ### |
+| run_setting.diagnosis_checking.enable | ### | ### |
+| run_setting.diagnosis_checking.names | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis checking name. All diagnosis checking functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
+| run_setting.diagnosis_fixing | ### | ### |
+| run_setting.diagnosis_fixing.enable | ### | ### |
+| run_setting.diagnosis_fixing.names | List of String | List all provided fixing functions for current platform certification plugin by diagnosis function name. All diagnosis fixing precesses will be triggered automatically when the plugin start to run. If customer desire to apply partial fixing functions in current plugin, please comment out the functions which will be ignored. |  
+| run_setting.diagnosis_undo | ### | ### |
+| run_setting.diagnosis_undo.enable | ### | ### |
+| run_setting.diagnosis_undo.names | ### | ### |
+| run_setting.data_collection | ### | ### |
+| run_setting.data_collection.enable | ### | ### |
+| run_setting.data_collection.names | python file with string | define the data type which we will collect from customer environment.|
 | white_ip_list | One Python File with one string | Represent all IPs that need to be ignored by the current plugin during plugin running. |
-| run_mode | List of Integer | Represent the running mode of current plugin. 0: only diagnosis_precheck, 1: diagnosis_precheck + diagnosis checking, 2: diagnosis_precheck + diagnosis checking + diagnosis fixing, 3: data collection. |
+| data_collection | ### | Represent all IPs that need to be ignored by the current plugin during plugin running. |
+| white_mac_list | One Python File with one string | Represent all MACs that need to be ignored by the current plugin during plugin running. |
+| white_interface_list | One Python File with one string | Represent all Interfaces that need to be ignored by the current plugin during plugin running. |
 | device_scope | Object | Represent the device scope information of current plugin. |
 | device_scope.scope_option | Integer | Represent the type of device scope which will considered in current plugin. 0 All device, 1 Device Group, 2 Site, 3 Device Name.|
 | device_scope.scope_names | string | depands on which device scope will be inserted in current plugin. If the value of scope_option is 0, no need to insert this value, if scope_option is 1 then a device group name must be provided. |
+| cert_db_reset | ### | ### |
 | debug_options | Object | Define the debug features of current diagnosis process. |
 | debug_options.build_common_table_from_inputs | Boolean | Represent whether build the common table base on customer inputs. |
 | debug_options.build_digital_twin | Boolean | Represent whether build the digital twin table base on customer inputs. |
