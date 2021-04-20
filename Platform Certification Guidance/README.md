@@ -6,9 +6,8 @@
   * 1.1. [ToolKit Architecture](#ToolKit)<br>
 * 2. [Input](#Input)<br>
   * 2.1. [Certification Input Blocks](#Certification)<br>
-    * 2.1.1. [Diagnosis Inputs Block](#Diagnosis)<br>
-    * 2.1.2. [Diagnosis Function Block](#Dia)<br>
-    * 2.1.3. [Global Settings Block](#Global)<br>
+    * 2.1.1. [input.yaml Inputs Block](#Diagnosis)<br>
+    * 2.1.2. [Python input Block](#Dia)<br>
   * 2.2. [Certification Input Attributes Detail](#Certif)<br>
   * 2.3. [Certification Input Yaml Example](#Certifica)<br>
 * 3. [Diagnosis List](#List)<br>
@@ -78,9 +77,17 @@ The main purpose of platform certification plugin is applying the accuracy error
 
 ### 2.1 Certification Input Blocks <a name="ToolCertificationKit"/>
 
-#### 2.1.1. Diagnosis Inputs Block <a name="Diagnosis"/>
+#### 2.1.1. input.yaml Inputs Block <a name="Diagnosis"/>
 **diagnosis_methods**<br>
 Customer needs to insert all detail information for each certification which will be included in current plugin. Certification name, enable flag and all detail inputs must be inserted.
+
+**run_setting**<br>
+Customer need to pre-define desired detecting processes at this section which need to be triggered automatically to find platform related issues after plugin running successfully. For each fixing actions(all provided actions please check [Diagnosis List](#List) table), customer need to decide whether all listed diagnosis functions would be triggered during current plugin running. If one or few of the actions won't be triggered, customer just need to comment out the corresponding action name(s) from diagnosis_functions yaml section. Please check [Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md) for more information.
+
+**Other Settings**<br>
+Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
+
+#### 2.1.2. Python input Block <a name="Dia"/>
 
 **inputs**<br>
 As the most important section of certification_inputs, customer must review all attributes which belongs current component in [Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md). 
@@ -103,15 +110,6 @@ Represent the config patterns which will be considered as a filter for daignosis
 Represent the regex rules which will be considered as a filter for diagnosis data.
 
 If multiple qualification methods included, customer need to provide the boolean_expression in method level accurately to represent the relationship between each qualification method. Similar with point c, if customer provide multiple conditions in gdr_qulification, the boolean_expression in gdr_qulification level also need to be inserted accurately.
-
-#### 2.1.2. Diagnosis Function Block <a name="Dia"/>
-
-**diagnosis_functions**<br>
-Customer need to pre-define desired detecting processes at this section which need to be triggered automatically to find platform related issues after plugin running successfully. For each fixing actions(all provided actions please check [Diagnosis List](#List) table), customer need to decide whether all listed diagnosis functions would be triggered during current plugin running. If one or few of the actions won't be triggered, customer just need to comment out the corresponding action name(s) from diagnosis_functions yaml section. Please check [Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md) for more information.
-
-#### 2.1.3. Global Settings Block <a name="Global"/>
-**global_settings**<br>
-Customer need to insert all corresponding values for each attribute in this section. Please check Detail Introduction for more information.
 
 ### [2.2 Certification Input Attributes Detail](https://github.com/PlatformCertification/Certification-IEv10.0/blob/main/Platform%20Certification%20Guidance/Certification%20Input%20Attributes%20Detail.md) <a name="Certif"/>
 ***Click on the title for detail information.***
