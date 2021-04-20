@@ -7,47 +7,89 @@
 
 ```Yaml
 ---
-certificate_methods:
-  - nb_cert_method_system_table
-  - nb_cert_method_cisco_ios
-  - nb_cert_method_cisco_ios_xr
-  - nb_cert_method_cisco_nxos
-  - nb_cert_method_f5_load_balancer
-  - nb_cert_method_junos
-  - nb_cert_method_checkpoint
-  #- nb_cert_method_arista_switch
-  #- nb_cert_method_alu_router
-  #- nb_cert_method_wlc
-  #- nb_cert_method_fortinet_firewall
-  #- nb_cert_method_palo_alto_firewall
-  #- nb_cert_method_asa
-  - my_cert_method_cisco_ios # copy from nb_cert_cisco_ios
-  - my_cert_method_1 # write the new, include nxos, xr
-  - my_cert_method_2 # mixed input
-diagnosis_precheck:
-  - dx_precheck_qualification_coverage
-diagnosis_checking:
-  - dx_checking_enhanced_seed_ip
-  - dx_checking_l3_neighbor
-  - dx_checking_l2_neighbor
-  - dx_checking_duplicate_ip
-  - dx_checking_duplicate_subnet
-dignosis_fixing:
-  - dx_fixing_duplicate_ip
-  - dx_fixing_duplicate_subnet
-data_collection: data_collection
+diagnosis_methods:
+  - nb_dm_system_table
+  - nb_dm_alcatel_lucent_service_router
+  - nb_dm_alcatel_omniswitch_os
+  - nb_dm_arista
+  - nb_dm_aruba
+  - nb_dm_brocade_switch
+  - nb_dm_checkpoint
+  - nb_dm_cisco_asa
+  - nb_dm_cisco_catalyst
+  - nb_dm_cisco_firepower_ngfw
+  - nb_dm_cisco_firepower_ngfw_ftd
+  - nb_dm_cisco_ios
+  - nb_dm_cisco_ios_xr
+  - nb_dm_cisco_nxos
+  - nb_dm_cisco_wlc
+  - nb_dm_f5_load_balancer
+  - nb_dm_fortinet_fortigate_firewall
+  - nb_dm_hp_comware_swicth
+  - nb_dm_hp_procurve
+  - nb_dm_juniper_srx_firewall
+  - nb_dm_junos
+  - nb_dm_palo_alto_panorama
+  - nb_dm_palo_alto
+  - nb_dm_riverbed_wan_optimizer
+  - nb_dm_silverpeak_wan_optimizer
+  - nb_dm_ubiquiti
+  #- my_dm_cisco_ios # copy from nb_cert_cisco_ios
+  #- my_dm_1 # write the new, include nxos, xr
+  #- my_dm_2 # mixed input
+run_folder: reports
+run_setting:
+  qualification:
+    enable: true
+    names:
+      - cert_qualification
+  benchmark:
+    enable: false
+    names:
+      - cert_benchmark_data
+  diagnosis_checking:
+    enable: false
+    names:
+      - dx_checking_enhanced_seed_ip
+      - dx_checking_l3_neighbor
+      - dx_checking_l2_neighbor
+      - dx_checking_device_integrity
+      #- dx_checking_device_datas
+      - dx_checking_duplicate_ip
+      - dx_checking_duplicate_subnet
+  diagnosis_fixing:
+    enable: false
+    names:
+      - dx_fixing_duplicate_ip
+      - dx_fixing_duplicate_subnet
+      - dx_fixing_gdr
+      - dx_fixing_topo
+  diagnosis_undo:
+    enable: false
+    names:
+      - dx_undo_duplicate_ip
+      - dx_undo_duplicate_subnet
+      - dx_undo_fixing_gdr
+      - dx_undo_fixing_topo
+  data_collection:
+    enable: false
+    names:
+      - cert_data_collection
 white_ip_list: white_ip_list
-run_mode: 1 
+data_collection: data_collection
+white_mac_list: white_mac_list
+white_interface_list: white_interface_list
 device_scope:
-  scope_option: 0 #  0 All device, 1 Device Group, 2 Site, 3 Device Name.
+  scope_option: 0 #  0 All device, 1 Device Group, 2 Site Path Name, 3 Device Name.
   scope_names:
-    #- site_name
+    #- device_group1
+cert_db_reset: false
 debug_options:
-  log_level: 0
+  log_level: 1
   build_common_table_from_inputs: true
   build_digital_twin: true
   run_diagnosis: true
-  use_parser_cache_data: false
+  use_baseline: true # default is true, get paeser cli from cert benchmark baseline
 ```
 
 ### White IP List Python Sample
