@@ -3,22 +3,22 @@
 |Name|Type|Description|
 | --- | --- | --- |
 | diagnosis_methods | List of Python files | Define the entire data inputs for the entire following diagnosis process. Each Python file only contains a large string with yaml structure to define one stream data resource. For detail information of each element in diagnosis_inputs, please check the following sub [table](#subTable).|
-| run_setting | ### | ### | 
-| run_setting.qualification | ### | ### |
-| run_setting.qualification.enable | ### | ### |
-| run_setting.qualification.names | ### | ### |
-| run_setting.benchmark | ### | ### |
-| run_setting.benchmark.enable | ### | ### |
-| run_setting.benchmark.names | ### | ### |
-| run_setting.diagnosis_checking | ### | ### |
-| run_setting.diagnosis_checking.enable | ### | ### |
+| run_setting | Object | Set the certification plugin running process. | 
+| run_setting.qualification | Object | Switch of qualification process. |
+| run_setting.qualification.enable | Boolean | Define whether the qualification process will be considered during current plugin running. true: considered, false: un-considered |
+| run_setting.qualification.names | String | The function name in back end, cannot be modified by customer.  |
+| run_setting.benchmark | Object | Switch of benchmark process. |
+| run_setting.benchmark.enable | Boolean | Define whether the benchmark process will be considered during current plugin running. true: considered, false: un-considered |
+| run_setting.benchmark.names | String | The function name in back end, cannot be modified by customer. |
+| run_setting.diagnosis_checking | Object | Switch of diagnosis checking process. |
+| run_setting.diagnosis_checking.enable | Boolean | Define whether the diagnosis checking process will be considered during current plugin running. true: considered, false: un-considered |
 | run_setting.diagnosis_checking.names | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis checking name. All diagnosis checking functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
-| run_setting.diagnosis_fixing | ### | ### |
-| run_setting.diagnosis_fixing.enable | ### | ### |
+| run_setting.diagnosis_fixing | Object | Switch of diagnosis fixing process. |
+| run_setting.diagnosis_fixing.enable | Boolean | Define whether the diagnosis checking fixing will be considered during current plugin running. true: considered, false: un-considered |
 | run_setting.diagnosis_fixing.names | List of String | List all provided fixing functions for current platform certification plugin by diagnosis function name. All diagnosis fixing precesses will be triggered automatically when the plugin start to run. If customer desire to apply partial fixing functions in current plugin, please comment out the functions which will be ignored. |  
-| run_setting.diagnosis_undo | ### | ### |
-| run_setting.diagnosis_undo.enable | ### | ### |
-| run_setting.diagnosis_undo.names | ### | ### |
+| run_setting.diagnosis_undo | Object | ### |
+| run_setting.diagnosis_undo.enable | Boolean | ### |
+| run_setting.diagnosis_undo.names | List of String | ### |
 | run_setting.data_collection | ### | ### |
 | run_setting.data_collection.enable | ### | ### |
 | run_setting.data_collection.names | python file with string | define the data type which we will collect from customer environment.|
