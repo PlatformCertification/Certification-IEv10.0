@@ -14,14 +14,14 @@
 | run_setting.diagnosis_checking.enable | Boolean | Define whether the diagnosis checking process will be considered during current plugin running. true: considered, false: un-considered |
 | run_setting.diagnosis_checking.names | List of String | List all provided diagnosis functions for current platform certification plugin by diagnosis checking name. All diagnosis checking functions will be triggered automatically when the plugin start to run. If customer desire to apply partial functions in current plugin, please comment out the functions which will be ignored. |  
 | run_setting.diagnosis_fixing | Object | Switch of diagnosis fixing process. |
-| run_setting.diagnosis_fixing.enable | Boolean | Define whether the diagnosis checking fixing will be considered during current plugin running. true: considered, false: un-considered |
+| run_setting.diagnosis_fixing.enable | Boolean | Define whether the diagnosis fixing will be considered during current plugin running. true: considered, false: un-considered |
 | run_setting.diagnosis_fixing.names | List of String | List all provided fixing functions for current platform certification plugin by diagnosis function name. All diagnosis fixing precesses will be triggered automatically when the plugin start to run. If customer desire to apply partial fixing functions in current plugin, please comment out the functions which will be ignored. |  
-| run_setting.diagnosis_undo | Object | ### |
-| run_setting.diagnosis_undo.enable | Boolean | ### |
-| run_setting.diagnosis_undo.names | List of String | ### |
-| run_setting.data_collection | ### | ### |
-| run_setting.data_collection.enable | ### | ### |
-| run_setting.data_collection.names | python file with string | define the data type which we will collect from customer environment.|
+| run_setting.diagnosis_undo | Object | Switch of diagnosis undo process. |
+| run_setting.diagnosis_undo.enable | Boolean | Define whether the diagnosis undo process will be considered during current plugin running. true: considered, false: un-considered |
+| run_setting.diagnosis_undo.names | List of String | Specify which fixing method considered in diagnosis fixing will be re-covered in current undo process.  |
+| run_setting.data_collection | Object | Switch of data collection process. |
+| run_setting.data_collection.enable | Boolean | Define whether the data collection process will be considered during current plugin running. true: considered, false: un-considered |
+| run_setting.data_collection.names | String | The function name in back end, cannot be modified by customer. |
 | white_ip_list | One Python File with one string | Represent all IPs that need to be ignored by the current plugin during plugin running. |
 | data_collection | ### | Represent all IPs that need to be ignored by the current plugin during plugin running. |
 | white_mac_list | One Python File with one string | Represent all MACs that need to be ignored by the current plugin during plugin running. |
